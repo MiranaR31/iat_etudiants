@@ -8,7 +8,7 @@ define(['questAPI'], function(Quest){
     API.addPagesSet('basicPage',{
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Questionnaire',
-        decline: true,
+        decline: false,
         declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
         autoFocus:true, 
         progressBar:  'Page <%= pagesMeta.number %> sur 12'
@@ -35,6 +35,11 @@ define(['questAPI'], function(Quest){
     API.addQuestionsSet('basicSelect',{ //Sélection unique 
         inherit :'basicQ',
         type: 'selectOne'
+    });
+
+	API.addQuestionsSet('basicMulti',{ //Sélection unique 
+        inherit :'basicQ',
+        type: 'selectMulti'
     });
 	
     API.addQuestionsSet('basicDropdown',{ //Menu déroulant 
@@ -63,34 +68,35 @@ define(['questAPI'], function(Quest){
     /**
 	*Specific questions
 	*/	
-	//Démographie
-	API.addQuestionsSet('genre',{
+	//Carctéristiques démographiques
+	API.addQuesionsSet('0',{
+		inherit : 'basicSelect',
+		name : 'licence',
+		decline : false,
+		stem : 'Vous êtes actuellement en :', 
+		answers : [
+			{text : 'L1', value: 1},
+			{text : 'L2', value : 2},
+			{text : 'L3', value : 3}
+			]
+	});
+	
+	API.addQuestionsSet('1',{
 		inherit : 'basicSelect',
 		name : 'genre',
-		stem : 'Quelle est votre identité de genre actuelle ?',
+		decline : false,
+		stem : 'Quel est votre sexe à l\'état-civil ?',
 		answers : [
 			{text : 'Homme'},
 			{text : 'Femme'},
-			{text : 'Autre'},
-			{text : 'Ne souhaite pas répondre'}
 				]
 	});
 
-	API.addQuestionsSet('age',{
-		inherit : 'basicText', 
-		name : 'age',
-		stem : 'Quel âge avez-vous ?',
-		validator : 'number', 
-		errorMsg : {
-			required : 'Veuillez indiquer votre âge.',
-			number : 'Veuillez entrer un nombre valide'
-		}
-	});
-
-	API.addQuestionsSet('pays_naissance',{
+	API.addQuestionsSet('2',{
 	    inherit : 'basicDropdown',
-	    name: 'pays_naissance',
-	    stem: 'Quel est votre pays de naissance ?',
+	    name: 'nationalité',
+		decline : false, 
+	    stem: 'Quelle est votre nationalité ?',
 	    answers: [
 	        {text:'Afghanistan', value:1},
 	        {text:'Afrique du Sud', value:2},
@@ -253,137 +259,304 @@ define(['questAPI'], function(Quest){
 	        {text:'Autre', value:999}
 	    ]
 	});
-		
-	//Explicit 
-	API.addQuestionsSet('explicit1',{
-		inherit : 'likert5',
-		name : 'diff_culture',
-		stem : 'Il est mieux pour une classe qu\'il y ait une diversité de coutumes, de cultures et d\'origines ?',
+	
+	API.addQuestionsSet('3',{
+		inherit : 'basicText', 
+		name : 'annee_naissance',
+		stem : 'Quelle est votre année de naissance ?',
+		decline : false,
+		validator : 'number', 
+		errorMsg : {
+			required : 'Veuillez indiquer votre âge.',
+			number : 'Veuillez entrer un nombre valide'
+		}
 	});
 
-	API.addQuestionsSet('explicit2',{
-		inherit : 'likert5',
-		name : 'facilite_etu',
-		stem : 'Pensez-vous, qu\'en moyenne, les étudiants de certaines origines ont plus de facilité dans certaines matières ?',
+	API.addQuestionsSet('4',{
+		inherit : 'basicSelect',
+		name : 'lieu_naissance',
+		decline: false, 
+		stem : 'Où êtes-vous né ?',
+		answers : [
+			{text : 'En France', value:1},
+			{text : 'A l'étranger', value : 2}
+			]
 	});
-
-	API.addQuestionsSet('explicit3',{
-		inherit : 'likert5',
-		name : 'difficulte_afr',
-		stem : 'Pensez-vous, qu\'en moyenne, les étudiants d\'origine maghrébine ou africaine ont plus de difficultés dans certaines matières, au-delà de la potentielle barrière de la langue ?',
-	});
-
-	//Profs
-	API.addQuestionsSet('prof1',{
-		inherit : 'likert5',
-		name : 'prof_reponse_eleve',
-		stem : 'Dans votre enseignement, vous laissez les étudiants chercher les réponses eux-mêmes, au risque qu\'ils se trompent, avant de leur expliquer et leur donner les solutions.',
-	});
-
-	API.addQuestionsSet('prof2',{
-		inherit : 'likert5',
-		name : 'prof_participation_eleve',
-		stem : 'Dans votre enseignement, vous invitez les étudiants à participer, à avoir un regard critique et à poser des questions.',
-	});
-
-	API.addQuestionsSet('prof3',{
-		inherit : 'likert5',
-		name : 'prof_travail_eleve',
-		stem : 'Si un étudiant travaille suffisamment, il peut devenir le meilleur de sa classe (peu importe ses capacités innées).',
-	});
-
-	API.addQuestionsSet('prof4',{
-		inherit : 'likert5',
-		name : 'prof_autorite',
-		stem : 'Les enseignants doivent garder une certaine distance et incarner l\'autorité dans leur relation avec les étudiants.',
-	});
-
-	API.addQuestionsSet('prof5',{
+	
+	API.addQuestionsSet('5.1',{
 		inherit : 'basicDropdown',
-		name : 'prof_annees', 
-		stem : 'Depuis combien d\'années enseignez-vous cette matière ?', 
+		name : 'annee_france_1',
+		decline : false, 
+		stem : 'A quel âge vous êtes-vous installés en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
 		answers : [
-			{text : '0', value:0},
-			{text: '1', value:1},
-	        {text:'2', value:2},
-	        {text:'3', value:3},
-	        {text:'4', value:4},
-	        {text:'5', value:5},
-	        {text:'6', value:6},
-	        {text:'7', value:7},
-	        {text:'8', value:8},
-	        {text:'9', value:9},
-	        {text:'10', value:10},
-	        {text:'11', value:11},
-	        {text:'12', value:12},
-	        {text:'13', value:13},
-	        {text:'14', value:14},
-	        {text:'15', value:15},
-	        {text:'16', value:16},
-	        {text:'17', value:17},
-	        {text:'18', value:18},
-	        {text:'19', value:19},
-	        {text:'20', value:20},
-	        {text:'21', value:21},
-	        {text:'22', value:22},
-	        {text:'23', value:23},
-	        {text:'24', value:24},
-	        {text:'25', value:25},
-	        {text:'26', value:26},
-	        {text:'27', value:27},
-	        {text:'28', value:28},
-	        {text:'29', value:29},
-	        {text:'30', value:30},
-	        {text:'31', value:31},
-	        {text:'32', value:32},
-	        {text:'33', value:33},
-	        {text:'34', value:34},
-	        {text:'35', value:35},
-	        {text:'36', value:36},
-	        {text:'37', value:37},
-	        {text:'38', value:38},
-	        {text:'39', value:39},
-	        {text:'40', value:40},
+			{text : '0', value : 0},
+			{text : '1', value : 1},
+			{text : '2', value : 2},
+			{text : '3', value : 3},
+			{text : '4', value : 4},
+			{text : '5', value : 5},
+			{text : '6', value : 6},
+			{text : '7', value : 7},
+			{text : '8', value : 8},
+			{text : '9', value : 9},
+			{text : '10', value : 10},
+			{text : '11', value : 11},
+			{text : '12', value : 12},
+			{text : '13', value : 13},
+			{text : '14', value : 14},
+			{text : '15', value : 15},
+			{text : '16', value : 16},
+			{text : '17', value : 17},
+			{text : '18', value : 18},
+			{text : '19', value : 19},
+			{text : '20', value : 20},
+			{text : '21', value : 21},
+			{text : '22', value : 22},
+			{text : '23', value : 23},
+			{text : '24', value : 24},
+			{text : '25', value : 25},
+			{text : '26', value : 26},
+			{text : '27', value : 27},
+			{text : '28', value : 28},
+			{text : '29', value : 29},
+			{text : '30', value : 30},
+			{text : 'Ne sait pas', value : 999}
 			]
 	});
 
-	API.addQuestionsSet('contrat',{
-		inherit : 'basicSelect',
-		name : 'contrat',
-		stem : 'Quel type de contrat/statut avez-vous?', 
+	API.addQuestionsSet('5.2',{
+		inherit : 'basicSelect', 
+		name: 'annee_france_2',
+		decline: false, 
+		stem : 'A quel âge vous êtes-vous installés en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
 		answers : [
-			{text : 'Maître de conférence', value:1},
-			{text : 'Professeur des universités', value : 2},
-			{text : 'Vacataire', value : 3},
-			{text : 'Doctorant sous contrat', value : 4},
-			{text : 'Autre', value : 5}
+			{text : 'Avant 5 ans', value: 1},
+			{text : 'Entre 5 et 10 ans', value: 2},
+			{text : 'Entre 11 et 15 ans', value: 3},
+			{text : 'Entre 15 et 18 ans', value: 4},
+			{text : 'Après 18 ans', value: 5}
 			]
 	});
 
-	API.addQuestionsSet('vacataire',{
+	API.addQuestionsSet('5.3',{
 		inherit : 'basicSelect',
-		name : 'vacataire',
-		stem : 'Si vous êtes vacataires, enseignez-vous cette matière ailleurs qu\'à l\'Université ?',
+		name : 'langue_fr',
+		decline : false, 
+		stem : 'Parliez-vous français au sein de votre famille durant votre enfance ?',
+		answers : [
+			{text : 'Oui', value: 1},
+			{text : 'Non', value: 2}
+			]
+	});
+
+	API.addQuestionsSet('6',{
+		inherit : 'basicSelect',
+		name : 'diplome_pere',
+		decline : false, 
+		stem : 'Quel est le plus haut diplôme détenu par votre père ?',
+		answers : [
+			{text : 'Aucun diplôme', value : 1},
+			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de niveau équivalent)',value: 2},
+			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de niveau équivalent',value:3},
+			{text : 'Diplôme de niveau BAC+2 (DEUG,BTS ou équivalent)', value: 4},
+			{text : 'Diplôme de niveau BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
+			{text : 'Diplôme de niveau BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
+			{text : 'Ne sait pas', value: 8}
+			]
+	});
+
+	API.addQuestionsSet('7',{
+		inherit : 'basicSelect',
+		name : 'diplome_mere',
+		decline : false, 
+		stem : 'Quel est le plus haut diplôme détenu par votre mère ?',
+		answers : [
+			{text : 'Aucun diplôme', value : 1},
+			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de niveau équivalent)',value: 2},
+			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de niveau équivalent',value:3},
+			{text : 'Diplôme de niveau BAC+2 (DEUG,BTS ou équivalent)', value: 4},
+			{text : 'Diplôme de niveau BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
+			{text : 'Diplôme de niveau BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
+			{text : 'Ne sait pas', value: 8}
+			]
+	});
+
+	API.addQuestionsSet('8',{
+		inherit : 'basicSelect',
+		name : 'travail_pere',
+		decline : false, 
+		stem : 'Quelle est la situation actuelle ou la dernière situation de votre père ?',
+		answers : [
+			{text : 'Salarié', value : 1},
+			{text : 'A son compte ou indépendant', value : 2},
+			{text : 'Au chômage (inscrit ou non à France Travail', value : 3},
+			{text : 'Homme au foyer', value : 4},
+			{text : 'Retraité ou retiré des affaires ou en préretraite', value : 5},
+			{text : 'Autre', value : 8}
+			]
+	});
+
+	API.addQuestionsSet('9',{
+		inherit : 'basicSelect',
+		name : 'travail_mere',
+		decline : false, 
+		stem : 'Quelle est la situation actuelle ou la dernière situation de votre mère ?',
+		answers : [
+			{text : 'Salariée', value : 1},
+			{text : 'A son compte ou indépendant', value : 2},
+			{text : 'Au chômage (inscrit ou non à France Travail', value : 3},
+			{text : 'Femme au foyer', value : 4},
+			{text : 'Retraitée ou retirée des affaires ou en préretraite', value : 5},
+			{text : 'Autre', value : 8}
+			]
+	});
+			
+	//Parcours scolaire 
+
+	API.addQuestionsSet('10',{
+		inherit : 'basicSelect',
+		name : 'bac',
+		decline : false, 
+		stem : 'Quel baccalauréat avez-vous passé ?',
+		answers : [
+			{text : 'Général', value : 1},
+			{text : 'Professionnel', value : 2},
+			{text : 'Technologique', value : 3}
+			]
+	});
+
+	API.addQuestionsSet('11', {
+		inherit : 'basicSelect', 
+		name : 'bac_fr',
+		decline : false, 
+		stem : 'S\'agit-il d\'un baccalauréat d\'un établissement français (y compris à l\'étranger)',
+		answers :[
+			{text : 'Oui', value : 1},
+			{text : 'Non', value : 2}
+			]
+	});
+
+	API.addQuestionsSet('12', {
+		inherit : 'basicText',
+		name : 'bac_annee',
+		decline : false, 
+		stem : 'En quelle année avez-vous passé le baccalauréat ?'
+	});
+
+	API.addQuestionsSet('13',{
+		inherit : 'basicSelect',
+		name : 'bac_filiere',
+		decline: false, 
+		stem : 'Quelle était la série de votre baccalauréat général ?',
+		answers : [
+			{text : 'Série S (Scientifique)', value : 1},
+			{text : 'Série ES (Economique et Sociale)', value : 2},
+			{text : 'Série L (Littéraire)', value : 3},
+			{text : 'Autre', value : 4}
+			]
+	});
+
+	API.addQuestionsSet('14',{
+		inherit : 'basicMulti',
+		name : 'bac_specialité_term',
+		decline : false, 
+		stem : 'Avez-vous suivi les enseignements suivants en terminale ? <i>Plusieurs réponses possibles</i>',
+		answers : [
+			{text : 'Enseignement de spécialité Mathématiques', value : 1},
+			{text : 'Enseignement de spécialité Sciences économiques et sociales', value : 2},
+			{text : 'Option Mathématiques Expertes', value : 3},
+			{text : 'Option Mathématiques Complémentaires', value : 4},
+			{text : 'Aucun des enseignements mentionnés', value : 5}
+			]
+	});
+
+	API.addQuestionsSet('15',{
+		inherit : 'basicSelect', 
+		name : 'math_premiere', 
+		decline : false, 
+		stem : 'Avez-vous suivi l\'enseignement de spécialité de Mathématiques en Première ?',
 		answers : [
 			{text : 'Oui', value : 1},
 			{text : 'Non', value : 2}
 			]
 	});
 
-	API.addQuestionsSet('satisfaction',{
-		inherit : 'likert5',
-		name : 'satisfaction',
-		stem : 'Dans quelle mesure êtes-vous satisfait(e)s du métier d\'enseignant ?',
+	API.addQuestionsSet('16',{
+		inherit : 'basicSelect', 
+		name : 'bac_mention',
+		decline : false, 
+		stem : 'Quelle mention avez-vous eu au baccalauréat ?',
 		answers : [
-			{text : 'Très satisfait(e)', value:5},
-			{text : 'Plutôt satisfait(e)', value:4},
-			{text : 'Ni satisfait(e) ni insatisfait(e)', value:3},
-			{text : 'Plutôt insatisfait(e)', value:2},
-			{text : 'Très insatisfait(e)', value:1}
+			{text : 'Mention passable / Aucune mention (moyenne entre 10 et 12)', value : 1},
+			{text : 'Mention assez bien (moyenne entre 12 et 14)', value : 2},
+			{text : 'Mention bien (moyenne entre 14 et 16)', value : 3},
+			{text : 'Mention très bien (moyenne entre 16 et 18)', value : 4}
+			]
+	});
+
+	//environnement d'étude 
+	API.addQuestionsSet('17',{
+		inherit : 'basicMulti',
+		name : 'environnement', 
+		decline : false, 
+		stem : 'Veuillez cocher les phrases qui correspondent à votre situation', 
+		answers : [
+			{text : 'Je dispose d'un ordinateur portable.', value : 1},
+			{text : 'J'ai un espace de travail personnel à mon domicile.', value : 2},
+			{text : 'Je dispose d'un emploi de plus de 2 heures par semaine en parallèle de mes études.', value : 3},
+			{text : 'J\'habite chez mes parents.', value : 4},
+			{text : 'J\'habite chez d\'autres membres de ma famille.', value : 5},
+			{text : 'Je viens à l'université en transport en commun.', value : 6}
+			]
+	});
+
+	API.addQuestionsSet('18',{
+		inherit : 'basicSelect', 
+		name : 'trajet',
+		stem : 'Combien de temps en moyenne mettez-vous pour venir à l\'université ?',
+		answers : [
+			{text : 'Moins de 30 minutes', value : 1},
+			{text : 'Entre 30 et 60 minutes', value : 2},
+			{text : 'Plus d'une heure', value : 3}
+			]
+	});
+
+	API.addQuestionsSet('19',{
+		inherit : 'basicSelect', 
+		name : 'suite_licence', 
+		stem : 'Souhaitez-vous poursuivre vos études jusqu\'en L3 Economie et Gestion ?',
+		answers : [
+			{text : 'Oui', value : 1},
+			{text : 'Non', value : 2},
+			{text : 'Ne sait pas', value : 3}
+			]
+	});
+
+	API.addQuestionsSet('20',{
+		inherit : 'basicSelect', 
+		name : 'suite_etudes',
+		stem : 'Qu\'envisagez-vous après votre licence ?', 
+		answers : [
+			{text : 'Continuer dans le même domaine (économie ou gestion)', value : 1},
+			{text : 'Continuer mes études dans un autre domaine', value : 2},
+			{text : 'Arrêter mes études', value : 3},
+			{text : 'Ne sait pas', value : 8}
+			]
+	});
+
+	//stéréotypes
+
+	API.addQuestionsSet('21',{
+		inherit : 'basicSelect', 
+		name : 'stereotypes', 
+		stem : 'Pensez-vous appartenir à un groupe envers lequel certains enseignants ont des stéréotypes ?',
+		answers : [
+			{text : 'Oui', value : 1}, 
+			{text : 'Non', value : 2},
+			{text : 'Ne sait pas', value : 8}
 			]
 	});
 			
-		
 
 
     API.addSequence([
