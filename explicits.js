@@ -561,37 +561,26 @@ define(['questAPI'], function(Quest){
 
     API.addSequence([
 		//demographie
-		{inherit:'basicPage',questions:{inherit:'genre'}},
-		{inherit:'basicPage',questions:{inherit:'age'}},
-		{inherit:'basicPage',questions:{inherit:'pays_naissance'}},
-		{//explicit
-			mixer:'random',
-			wrapper:true,
-			data:[
-				{inherit:'basicPage', questions: {inherit:'explicit1'}},
-				{inherit:'basicPage', questions: {inherit:'explicit2'}},
-				{inherit:'basicPage', questions: {inherit:'explicit3'}}
-				]},
-		//prof
-		{
-			mixer:'random',
-			wrapper:true,
-			data:[		
-		        {inherit:'basicPage', questions: {inherit:'prof1'}},
-				{inherit:'basicPage', questions: {inherit:'prof2'}},
-				{inherit:'basicPage', questions: {inherit:'prof3'}},
-				{inherit:'basicPage', questions: {inherit:'prof4'}}
-				]
-		},
-		{inherit:'basicPage', questions:{inherit:'contrat'}},
-		{
-			inherit:'basicPage',
-			condition: function(){ 
-				return this.current.questions.contrat == 3; 
-			},
-			questions:{inherit:'vacataire'}
-		},
-		{inherit:'basicPage',questions:{inherit:'satisfaction'}}
+		{inherit:'basicPage',questions:{inherit:'0'}},
+		{inherit:'basicPage',questions:{inherit:'1'}},
+		{inherit:'basicPage',questions:{inherit:'2'}},
+		{inherit:'basicPage',questions:{inherit:'3'}},
+		{inherit:'basicPage',questions:{inherit:'4'}},
+		{inherit:'basicPage',
+		 condition : '<%= current.questions.4.includes(1) %>',
+		 questions:{inherit:'6'}},
+		{inherit:'basicPage',
+		 condition : '<%= current.questions.4.includes(2) %>',
+		 questions:{inherit:'5.1'}},
+		{inherit:'basicPage',
+		 condition : '<%= current.questions.5.1.includes(1) %>',
+		 questions:{inherit:'5.3'}},
+		{inherit:'basicPage',
+		 condition : '<%= current.questions.5.1.includes(2) %>',
+		 questions:{inherit:'5.2'}},
+		{inherit:'basicPage',questions:{inherit:'5.3'}},
+		{inherit:'basicPage',questions:{inherit:'6'}},
+		
     ]);
 
 
