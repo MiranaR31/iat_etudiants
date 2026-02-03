@@ -69,7 +69,7 @@ define(['questAPI'], function(Quest){
 	*Specific questions
 	*/	
 	//Carctéristiques démographiques
-	API.addQuestionsSet('0',{
+	API.addQuestionsSet('1',{
 		inherit : 'basicSelect',
 		name : 'licence',
 		decline : false,
@@ -81,7 +81,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 	
-	API.addQuestionsSet('1',{
+	API.addQuestionsSet('2',{
 		inherit : 'basicSelect',
 		name : 'genre',
 		decline : false,
@@ -92,7 +92,7 @@ define(['questAPI'], function(Quest){
 				]
 	});
 
-	API.addQuestionsSet('2',{
+	API.addQuestionsSet('3',{
 	    inherit : 'basicDropdown',
 	    name: 'nationalité',
 		decline : false, 
@@ -260,7 +260,7 @@ define(['questAPI'], function(Quest){
 	    ]
 	});
 	
-	API.addQuestionsSet('3',{
+	API.addQuestionsSet('4',{
 		inherit : 'basicText', 
 		name : 'annee_naissance',
 		stem : 'Quelle est votre année de naissance ?',
@@ -272,7 +272,7 @@ define(['questAPI'], function(Quest){
 		}
 	});
 
-	API.addQuestionsSet('4',{
+	API.addQuestionsSet('5',{
 		inherit : 'basicSelect',
 		name : 'lieu_naissance',
 		decline: false, 
@@ -283,7 +283,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 	
-	API.addQuestionsSet('5.1',{
+	API.addQuestionsSet('6',{
 		inherit : 'basicDropdown',
 		name : 'annee_france_1',
 		decline : false, 
@@ -324,7 +324,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('5.2',{
+	API.addQuestionsSet('7',{
 		inherit : 'basicSelect', 
 		name: 'annee_france_2',
 		decline: false, 
@@ -338,7 +338,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('5.3',{
+	API.addQuestionsSet('8',{
 		inherit : 'basicSelect',
 		name : 'langue_fr',
 		decline : false, 
@@ -349,7 +349,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('6',{
+	API.addQuestionsSet('9',{
 		inherit : 'basicSelect',
 		name : 'diplome_pere',
 		decline : false, 
@@ -365,7 +365,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('7',{
+	API.addQuestionsSet('10',{
 		inherit : 'basicSelect',
 		name : 'diplome_mere',
 		decline : false, 
@@ -381,7 +381,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('8',{
+	API.addQuestionsSet('11',{
 		inherit : 'basicSelect',
 		name : 'travail_pere',
 		decline : false, 
@@ -396,7 +396,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('9',{
+	API.addQuestionsSet('12',{
 		inherit : 'basicSelect',
 		name : 'travail_mere',
 		decline : false, 
@@ -413,7 +413,7 @@ define(['questAPI'], function(Quest){
 			
 	//Parcours scolaire 
 
-	API.addQuestionsSet('10',{
+	API.addQuestionsSet('13',{
 		inherit : 'basicSelect',
 		name : 'bac',
 		decline : false, 
@@ -425,7 +425,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('11', {
+	API.addQuestionsSet('14', {
 		inherit : 'basicSelect', 
 		name : 'bac_fr',
 		decline : false, 
@@ -436,14 +436,15 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('12', {
+	API.addQuestionsSet('15', {
 		inherit : 'basicText',
 		name : 'bac_annee',
 		decline : false, 
-		stem : 'En quelle année avez-vous passé le baccalauréat ?'
+		stem : 'En quelle année avez-vous passé le baccalauréat ?',
+		validator: 'number'
 	});
 
-	API.addQuestionsSet('13',{
+	API.addQuestionsSet('16',{
 		inherit : 'basicSelect',
 		name : 'bac_filiere',
 		decline: false, 
@@ -456,7 +457,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('14',{
+	API.addQuestionsSet('17',{
 		inherit : 'basicMulti',
 		name : 'bac_specialité_term',
 		decline : false, 
@@ -470,7 +471,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('15',{
+	API.addQuestionsSet('18',{
 		inherit : 'basicSelect', 
 		name : 'math_premiere', 
 		decline : false, 
@@ -481,7 +482,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('16',{
+	API.addQuestionsSet('19',{
 		inherit : 'basicSelect', 
 		name : 'bac_mention',
 		decline : false, 
@@ -495,7 +496,7 @@ define(['questAPI'], function(Quest){
 	});
 
 	//environnement d'étude 
-	API.addQuestionsSet('17',{
+	API.addQuestionsSet('20',{
 		inherit : 'basicMulti',
 		name : 'environnement', 
 		decline : false, 
@@ -510,7 +511,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('18',{
+	API.addQuestionsSet('21',{
 		inherit : 'basicSelect', 
 		name : 'trajet',
 		stem : 'Combien de temps en moyenne mettez-vous pour venir à l\'université ?',
@@ -521,7 +522,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('19',{
+	API.addQuestionsSet('22',{
 		inherit : 'basicSelect', 
 		name : 'suite_licence', 
 		stem : 'Souhaitez-vous poursuivre vos études jusqu\'en L3 Economie et Gestion ?',
@@ -532,7 +533,7 @@ define(['questAPI'], function(Quest){
 			]
 	});
 
-	API.addQuestionsSet('20',{
+	API.addQuestionsSet('23',{
 		inherit : 'basicSelect', 
 		name : 'suite_etudes',
 		stem : 'Qu\'envisagez-vous après votre licence ?', 
@@ -546,7 +547,7 @@ define(['questAPI'], function(Quest){
 
 	//stéréotypes
 
-	API.addQuestionsSet('21',{
+	API.addQuestionsSet('24',{
 		inherit : 'basicSelect', 
 		name : 'stereotypes', 
 		stem : 'Pensez-vous appartenir à un groupe envers lequel certains enseignants ont des stéréotypes ?',
@@ -556,7 +557,8 @@ define(['questAPI'], function(Quest){
 			{text : 'Ne sait pas', value : 8}
 			]
 	});
-			
+
+	
 
 
     API.addSequence([
@@ -580,7 +582,15 @@ define(['questAPI'], function(Quest){
 		 questions:{inherit:'5.2'}},
 		{inherit:'basicPage',questions:{inherit:'5.3'}},
 		{inherit:'basicPage',questions:{inherit:'6'}},
-		
+		{inherit:'basicPage',questions:{inherit:'7'}},
+		{inherit:'basicPage',questions:{inherit:'8'}},
+		{inherit:'basicPage',questions:{inherit:'9'}},
+		{inherit:'basicPage',questions:{inherit:'10'}},
+		{inherit:'basicPage',questions:{inherit:'11'}},
+		{inherit:'basicPage',questions:{inherit:'12'}},
+		{inherit:'basicPage',
+		 condition:'<%= parseInt(current.questions.bac_annee) < 2021 %>',
+		 questions:{inherit:
     ]);
 
 
