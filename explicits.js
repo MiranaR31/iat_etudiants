@@ -501,12 +501,12 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Veuillez cocher les phrases qui correspondent à votre situation', 
 		answers : [
-			{text : 'Je dispose d'un ordinateur portable.', value : 1},
-			{text : 'J'ai un espace de travail personnel à mon domicile.', value : 2},
-			{text : 'Je dispose d'un emploi de plus de 2 heures par semaine en parallèle de mes études.', value : 3},
+			{text : 'Je dispose d\'un ordinateur portable.', value : 1},
+			{text : 'J\'ai un espace de travail personnel à mon domicile.', value : 2},
+			{text : 'Je dispose d\'un emploi de plus de 2 heures par semaine en parallèle de mes études.', value : 3},
 			{text : 'J\'habite chez mes parents.', value : 4},
 			{text : 'J\'habite chez d\'autres membres de ma famille.', value : 5},
-			{text : 'Je viens à l'université en transport en commun.', value : 6}
+			{text : 'Je viens à l\'université en transport en commun.', value : 6}
 			]
 	});
 
@@ -517,7 +517,7 @@ define(['questAPI'], function(Quest){
 		answers : [
 			{text : 'Moins de 30 minutes', value : 1},
 			{text : 'Entre 30 et 60 minutes', value : 2},
-			{text : 'Plus d'une heure', value : 3}
+			{text : 'Plus d\'une heure', value : 3}
 			]
 	});
 
