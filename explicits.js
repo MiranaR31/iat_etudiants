@@ -561,7 +561,7 @@ define(['questAPI'], function(Quest){
 
     API.addSequence([
 		//demographie
-		{inherit:'basicPage',questions:{inherit:'0'}},
+		{inherit:'basicPage',questions:{inherit:'niveau'}},
 		{inherit:'basicPage',questions:{inherit:'1'}},
 		{inherit:'basicPage',questions:{inherit:'2'}},
 		{inherit:'basicPage',questions:{inherit:'3'}},
