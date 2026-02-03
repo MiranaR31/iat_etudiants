@@ -1424,25 +1424,25 @@ define(['questAPI'], function(Quest){
 
 	API.addQuestionsSet('l3anglais5e_1',{
 		inherit: 'ressenti1', 
-		name: 'l3anglais5_1',
+		name: 'l3anglais5e_1',
 		header: 'Anglais (S1)'
 	});
 
 	API.addQuestionsSet('l3anglais5e_2',{
 		inherit: 'ressenti2', 
-		name: 'l3anglais5_2',
+		name: 'l3anglais5e_2',
 		header: 'Anglais (S1)'
 	});
 
 	API.addQuestionsSet('l3anglais5e_3',{
 		inherit: 'ressenti3', 
-		name: 'l3anglais5_3',
+		name: 'l3anglais5e_3',
 		header: 'Anglais (S1)'
 	});
 
 	API.addQuestionsSet('l3anglais5e_4',{
 		inherit: 'ressenti4', 
-		name: 'l3anglais5_4',
+		name: 'l3anglais5e_4',
 		header: 'Anglais (S1)'
 	});
 
@@ -1496,25 +1496,25 @@ define(['questAPI'], function(Quest){
 
 	API.addQuestionsSet('l3anglais6e_1',{
 		inherit: 'ressenti1', 
-		name: 'l3anglais5_1',
+		name: 'l3anglais6e_1',
 		header: 'Anglais (S1)'
 	});
 
 	API.addQuestionsSet('l3anglais6e_2',{
 		inherit: 'ressenti2', 
-		name: 'l3anglais5_2',
+		name: 'l3anglais6e_2',
 		header: 'Anglais (S1)'
 	});
 
 	API.addQuestionsSet('l3anglais6e_3',{
 		inherit: 'ressenti3', 
-		name: 'l3anglais5_3',
+		name: 'l3anglais6e_3',
 		header: 'Anglais (S1)'
 	});
 
 	API.addQuestionsSet('l3anglais6e_4',{
 		inherit: 'ressenti4', 
-		name: 'l3anglais5_4',
+		name: 'l3anglais6e_4',
 		header: 'Anglais (S1)'
 	});
 
@@ -1616,8 +1616,247 @@ define(['questAPI'], function(Quest){
 		header: 'Ressources humaines et diagnostic opérationnel (S1)'
 	});
 
+	API.addQuestionsSet('l3commerce1',{
+		inherit: 'ressenti1',
+		name: 'l3commerce1',
+		header: 'Commerce et négociation (S1)'
+	});
 	
+	API.addQuestionsSet('l3commerce2',{
+		inherit: 'ressenti2',
+		name: 'l3commerce2',
+		header: 'Commerce et négociation (S1)'
+	});
 
+	API.addQuestionsSet('l3commerce3',{
+		inherit: 'ressenti3',
+		name: 'l3commerce3',
+		header: 'Commerce et négociation (S1)'
+	});
+
+	API.addQuestionsSet('l3commerce4',{
+		inherit: 'ressenti4',
+		name: 'l3commerce4',
+		header: 'Commerce et négociation (S1)'
+	});
+
+	API.addQuestionsSet('l3init_mark1',{
+		inherit: 'ressenti1',
+		name: 'l3init_mark1',
+		header: 'Initiation au marketing (S1)'
+	});
+	
+	API.addQuestionsSet('l3init_mark2',{
+		inherit: 'ressenti2',
+		name: 'l3init_mark2',
+		header: 'Initiation au marketing (S1)'
+	});
+
+	API.addQuestionsSet('l3init_mark3',{
+		inherit: 'ressenti3',
+		name: 'l3init_mark3',
+		header: 'Initiation au marketing (S1)'
+	});
+
+	API.addQuestionsSet('l3init_mark4',{
+		inherit: 'ressenti4',
+		name: 'l3init_mark4',
+		header: 'Initiation au marketing (S1)'
+	});
+
+	API.addQuestionsSet('l3stats3_1',{
+		inherit: 'ressenti1',
+		name: 'l3stats3_1',
+		header: 'Statistiques descriptives (S1)'
+	});
+	
+	API.addQuestionsSet('l3stats3_2',{
+		inherit: 'ressenti2',
+		name: 'l3stats3_2',
+		header: 'Statistiques descriptives (S1)'
+	});
+
+	API.addQuestionsSet('l3stats3_3',{
+		inherit: 'ressenti3',
+		name: 'l3stats3_3',
+		header: 'Statistiques descriptives (S1)'
+	});
+
+	API.addQuestionsSet('l3stats3_4',{
+		inherit: 'ressenti4',
+		name: 'l3stats3_4',
+		header: 'Statistiques descriptives (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5g_1',{
+		inherit: 'ressenti1', 
+		name: 'l3anglais5g_1',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5g_2',{
+		inherit: 'ressenti2', 
+		name: 'l3anglais5g_2',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5g_3',{
+		inherit: 'ressenti3', 
+		name: 'l3anglais5g_3',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5g_4',{
+		inherit: 'ressenti4', 
+		name: 'l3anglais5g_4',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3c2i1',{
+		inherit: 'ressenti1', 
+		name: 'l3c2i1',
+		header: 'C2i (S1)'
+	});
+
+	API.addQuestionsSet('l3c2i2',{
+		inherit: 'ressenti2', 
+		name: 'l3c2i2',
+		header: 'C2i (S1)'
+	});
+
+	API.addQuestionsSet('l3c2i3',{
+		inherit: 'ressenti3', 
+		name: 'l3c2i3',
+		header: 'C2i (S1)'
+	});
+
+	API.addQuestionsSet('l3c2i4',{
+		inherit: 'ressenti4', 
+		name: 'l3c2i4',
+		header: 'C2i (S1)'
+	});
+
+	API.addQuestionsSet('l3diag_org1',{
+		inherit: 'ressenti1', 
+		name: 'l3diag_org1',
+		header: 'Diagnostic organisationnel (S2)'
+	});
+
+	API.addQuestionsSet('l3diag_org2',{
+		inherit: 'ressenti2', 
+		name: 'l3diag_org2',
+		header: 'Diagnostic organisationnel (S2)'
+	});
+
+	API.addQuestionsSet('l3diag_org3',{
+		inherit: 'ressenti3', 
+		name: 'l3diag_org3',
+		header: 'Diagnostic organisationnel (S2)'
+	});
+
+	API.addQuestionsSet('l3diag_org4',{
+		inherit: 'ressenti4', 
+		name: 'l3diag_org4',
+		header: 'Diagnostic organisationnel (S2)'
+	});
+
+	API.addQuestionsSet('l3fi_entreprise1',{
+		inherit: 'ressenti1', 
+		name: 'l3fi_entreprise1',
+		header: 'Finance d\'entreprise (S2)'
+	});
+
+	API.addQuestionsSet('l3fi_entreprise2',{
+		inherit: 'ressenti2', 
+		name: 'l3fi_entreprise2',
+		header: 'Finance d\'entreprise (S2)'
+	});
+
+	API.addQuestionsSet('l3fi_entreprise3',{
+		inherit: 'ressenti3', 
+		name: 'l3fi_entreprise3',
+		header: 'Finance d\'entreprise (S2)'
+	});
+
+	API.addQuestionsSet('l3fi_entreprise4',{
+		inherit: 'ressenti4', 
+		name: 'l3fi_entreprise4',
+		header: 'Finance d\'entreprise (S2)'
+	});
+
+	API.addQuestionsSet('l3etude1',{
+		inherit: 'ressenti1', 
+		name: 'l3etude1',
+		header: 'Etude de cas (S2)'
+	});
+
+	API.addQuestionsSet('l3etude1',{
+		inherit: 'ressenti2', 
+		name: 'l3etude1',
+		header: 'Etude de cas (S2)'
+	});
+
+	API.addQuestionsSet('l3etude1',{
+		inherit: 'ressenti3', 
+		name: 'l3etude1',
+		header: 'Etude de cas (S2)'
+	});
+
+	API.addQuestionsSet('l3etude1',{
+		inherit: 'ressenti4', 
+		name: 'l3etude1',
+		header: 'Etude de cas (S2)'
+	});
+	
+	API.addQuestionsSet('l3anglais6g_1',{
+		inherit: 'ressenti1', 
+		name: 'l3anglais6g_1',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l3anglais6g_2',{
+		inherit: 'ressenti2', 
+		name: 'l3anglais6g_2',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l3anglais6g_3',{
+		inherit: 'ressenti3', 
+		name: 'l3anglais6g_3',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l3anglais6g_4',{
+		inherit: 'ressenti4', 
+		name: 'l3anglais5g_4',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l3com1',{
+		inherit: 'ressenti1', 
+		name: 'l3com1',
+		header: 'Communication orale et écrite (S2)'
+	});
+
+	API.addQuestionsSet('l3com2',{
+		inherit: 'ressenti2', 
+		name: 'l3com2',
+		header: 'Communication orale et écrite (S2)'
+	});
+
+	API.addQuestionsSet('l3com3',{
+		inherit: 'ressenti3', 
+		name: 'l3com3',
+		header: 'Communication orale et écrite (S2)'
+	});
+
+	API.addQuestionsSet('l3com4',{
+		inherit: 'ressenti4', 
+		name: 'l3com4',
+		header: 'Communication orale et écrite (S2)'
+	});
+
+	
 
     API.addSequence([
 		//demographie
