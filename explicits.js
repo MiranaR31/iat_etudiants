@@ -1900,7 +1900,7 @@ define(['questAPI'], function(Quest){
 		 questions:{inherit:'17'}},
 		{inherit:'basicPAge', //si 17 == 1, alors 19, sinon 18
 		 condition:'<%=current.questions.bac_specialité_term != 1 %>',
-		 questions::{inherit: '18'}},
+		 questions:{inherit: '18'}},
 
 		{inherit: 'basicPage',questions:{inherit:'19'}},
 		{inherit: 'basicPage',questions:{inherit:'20'}},
