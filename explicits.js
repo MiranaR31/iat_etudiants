@@ -119,7 +119,8 @@ define(['questAPI'], function(Quest){
 		answers : [
 			{text : 'L1', value: 1},
 			{text : 'L2', value : 2},
-			{text : 'L3', value : 3}
+			{text : 'L3 Economie', value : 3},
+			{text : 'L3 Gestion des entreprises', value: 4}
 			]
 	});
 	
@@ -890,7 +891,7 @@ define(['questAPI'], function(Quest){
 		header: 'Mathématiques 2 (S2)'
 	});
 
-	API.addQuestionsSet('sl1tats2_1',{
+	API.addQuestionsSet('l1stats2_1',{
 		inherit: 'ressenti1', 
 		name: 'l1stats2_1',
 		header: 'Statistiques 2 (S2)'
@@ -1912,7 +1913,524 @@ define(['questAPI'], function(Quest){
 		 questions: {inherit:'23'}},
 		
 		{inherit: 'basicPage',questions:{inherit:'24'}},
+
+		//L1
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1anglais1_1'},
+			 {inherit:'l1anglais1_2'},
+			 {inherit:'l1anglais1_3'},
+			 {inherit:'l1anglais1_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1renfo_maths1'},
+			 {inherit:'l1renfo_maths2'},
+			 {inherit:'l1renfo_maths3'},
+			 {inherit:'l1renfo_maths4'}
+			 ]
+		},
 		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1maths1_1'},
+			 {inherit:'l1maths1_2'},
+			 {inherit:'l1maths1_3'},
+			 {inherit:'l1maths1_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1stats1_1'},
+			 {inherit:'l1stats1_2'},
+			 {inherit:'l1stats1_3'},
+			 {inherit:'l1stats1_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1intro_eco1'},
+			 {inherit:'l1intro_eco2'},
+			 {inherit:'l1intro_eco3'},
+			 {inherit:'l1intro_eco4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1intro_gest1'},
+			 {inherit:'l1intro_gest2'},
+			 {inherit:'l1intro_gest3'},
+			 {inherit:'l1intro_gest4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1micro1_1'},
+			 {inherit:'l1micro1_2'},
+			 {inherit:'l1micro1_3'},
+			 {inherit:'l1micro1_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1macro1_1'},
+			 {inherit:'l1macro1_2'},
+			 {inherit:'l1macro1_3'},
+			 {inherit:'l1macro1_4'}
+			 ]
+		},
+		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1enjeux_manag1'},
+			 {inherit:'l1enjeux_manag2'},
+			 {inherit:'l1enjeux_manag3'},
+			 {inherit:'l1enjeux_manag4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1compta1_1'},
+			 {inherit:'l1compta1_2'},
+			 {inherit:'l1compta1_3'},
+			 {inherit:'l1compta1_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1anglais2_1'},
+			 {inherit:'l1anglais2_2'},
+			 {inherit:'l1anglais2_3'},
+			 {inherit:'l1anglais2_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1maths2_1'},
+			 {inherit:'l1maths2_2'},
+			 {inherit:'l1maths2_3'},
+			 {inherit:'l1maths2_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 1 %>',
+		 questions:[
+			 {inherit:'l1stats2_1'},
+			 {inherit:'l1stats2_2'},
+			 {inherit:'l1stats2_3'},
+			 {inherit:'l1stats2_4'}
+			 ]
+		},
+
+		//L2
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2micro2_1'},
+			 {inherit:'l2micro2_2'},
+			 {inherit:'l2micro2_3'},
+			 {inherit:'l2micro2_4'}
+			 ]
+		},
+		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2macro2_1'},
+			 {inherit:'l2macro2_2'},
+			 {inherit:'l2macro2_3'},
+			 {inherit:'l2macro2_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2compta2_1'},
+			 {inherit:'l2compta2_2'},
+			 {inherit:'l2compta2_3'},
+			 {inherit:'l2compta2_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2intro_rh1'},
+			 {inherit:'l2intro_rh2'},
+			 {inherit:'l2intro_rh3'},
+			 {inherit:'l2intro_rh4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2etudes_mark1'},
+			 {inherit:'l2etudes_mark2'},
+			 {inherit:'l2etudes_mark3'},
+			 {inherit:'l2etudes_mark4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2maths3_1'},
+			 {inherit:'l2maths3_2'},
+			 {inherit:'l2maths3_3'},
+			 {inherit:'l2maths3_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2proba1_1'},
+			 {inherit:'l2proba1_2'},
+			 {inherit:'l2proba1_3'},
+			 {inherit:'l2proba1_4'}
+			 ]
+		},
+		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2anglais3_1'},
+			 {inherit:'l2anglais3_2'},
+			 {inherit:'l2anglais3_3'},
+			 {inherit:'l2anglais3_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2macro3_1'},
+			 {inherit:'l2macro3_2'},
+			 {inherit:'l2macro3_3'},
+			 {inherit:'l2macro3_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2pol_eco_soc1'},
+			 {inherit:'l2pol_eco_soc2'},
+			 {inherit:'l2pol_eco_soc3'},
+			 {inherit:'l2pol_eco_soc4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2mon_fi1'},
+			 {inherit:'l2mon_fi2'},
+			 {inherit:'l2mon_fi3'},
+			 {inherit:'l2mon_fi4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2analyse_fi1'},
+			 {inherit:'l2analyse_fi2'},
+			 {inherit:'l2analyse_fi3'},
+			 {inherit:'l2analyse_fi4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2gest_prod1'},
+			 {inherit:'l2gest_prod2'},
+			 {inherit:'l2gest_prod3'},
+			 {inherit:'l2gest_prod4'}
+			 ]
+		},
+		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2analyse_don1'},
+			 {inherit:'l2analyse_don2'},
+			 {inherit:'l2analyse_don3'},
+			 {inherit:'l2analyse_don4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 2 %>',
+		 questions:[
+			 {inherit:'l2anglais4_1'},
+			 {inherit:'l2anglais4_2'},
+			 {inherit:'l2anglais4_3'},
+			 {inherit:'l2anglais4_4'}
+			 ]
+		},
+
+		//L3 eco
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3croissance1'},
+			 {inherit:'l3croissance2'},
+			 {inherit:'l3croissance3'},
+			 {inherit:'l3croissance4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3eco_pub1'},
+			 {inherit:'l3eco_pub2'},
+			 {inherit:'l3eco_pub3'},
+			 {inherit:'l3eco_pub4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3eco_inter1'},
+			 {inherit:'l3eco_inter2'},
+			 {inherit:'l3eco_inter3'},
+			 {inherit:'l3eco_inter4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3eco_trav1'},
+			 {inherit:'l3eco_trav2'},
+			 {inherit:'l3eco_trav3'},
+			 {inherit:'l3eco_trav4'}
+			 ]
+		},
+		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3econometrie1'},
+			 {inherit:'l3econometrie2'},
+			 {inherit:'l3econometrie3'},
+			 {inherit:'l3econometrie4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3app_r1_1'},
+			 {inherit:'l3app_r1_2'},
+			 {inherit:'l3app_r1_3'},
+			 {inherit:'l3app_r1_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3anglais5e_1'},
+			 {inherit:'l3anglais5e_2'},
+			 {inherit:'l3anglais5e_3'},
+			 {inherit:'l3anglais5e_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3app_r2_1'},
+			 {inherit:'l3app_r2_2'},
+			 {inherit:'l3app_r2_3'},
+			 {inherit:'l3app_r2_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3excel1'},
+			 {inherit:'l3excel2'},
+			 {inherit:'l3excel3'},
+			 {inherit:'l3excel4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 3 %>',
+		 questions:[
+			 {inherit:'l3anglais6e_1'},
+			 {inherit:'l3anglais6e_2'},
+			 {inherit:'l3anglais6e_3'},
+			 {inherit:'l3anglais6e_4'}
+			 ]
+		},
+
+		//L3 gestion 
+		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3hpm1'},
+			 {inherit:'l3hpm2'},
+			 {inherit:'l3hpm3'},
+			 {inherit:'l3hpm4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3controle_ges1'},
+			 {inherit:'l3controle_ges2'},
+			 {inherit:'l3controle_ges3'},
+			 {inherit:'l3controle_ges4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3etude_march1'},
+			 {inherit:'l3etude_march2'},
+			 {inherit:'l3etude_march3'},
+			 {inherit:'l3etude_march4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3rh1'},
+			 {inherit:'l3rh2'},
+			 {inherit:'l3rh3'},
+			 {inherit:'l3rh4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3commerce1'},
+			 {inherit:'l3commerce2'},
+			 {inherit:'l3commerce3'},
+			 {inherit:'l3commerce4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3init_mark1'},
+			 {inherit:'l3init_mark2'},
+			 {inherit:'l3init_mark3'},
+			 {inherit:'l3init_mark4'}
+			 ]
+		},
+		
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3stats3_1'},
+			 {inherit:'l3stats3_2'},
+			 {inherit:'l3stats3_3'},
+			 {inherit:'l3stats3_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3anglais5g_1'},
+			 {inherit:'l3anglais5g_2'},
+			 {inherit:'l3anglais5g_3'},
+			 {inherit:'l3anglais5g_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3diag_org1'},
+			 {inherit:'l3diag_org2'},
+			 {inherit:'l3diag_org3'},
+			 {inherit:'l3diag_org4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3fi_entreprise1'},
+			 {inherit:'l3fi_entreprise2'},
+			 {inherit:'l3fi_entreprise3'},
+			 {inherit:'l3fi_entreprise4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3etude1'},
+			 {inherit:'l3etude2'},
+			 {inherit:'l3etude3'},
+			 {inherit:'l3etude4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3anglais6g_1'},
+			 {inherit:'l3anglais6g_2'},
+			 {inherit:'l3anglais6g_3'},
+			 {inherit:'l3anglais6g_4'}
+			 ]
+		},
+
+		{inherit: 'basicPage', 
+		 condition: '<%= current.questions.niveau == 4 %>',
+		 questions:[
+			 {inherit:'l3com1'},
+			 {inherit:'l3com2'},
+			 {inherit:'l3com3'},
+			 {inherit:'l3com4'}
+			 ]
+		},
 		
     ]);
 
