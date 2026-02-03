@@ -69,7 +69,7 @@ define(['questAPI'], function(Quest){
 	*Specific questions
 	*/	
 	//Carctéristiques démographiques
-	API.addQuesionsSet('0',{
+	API.addQuesionsSet('niveau',{
 		inherit : 'basicSelect',
 		name : 'licence',
 		decline : false,
