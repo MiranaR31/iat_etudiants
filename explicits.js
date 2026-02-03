@@ -52,17 +52,59 @@ define(['questAPI'], function(Quest){
 		inherit : 'basicQ',
 		type : 'text',
 	});
-	
-    API.addQuestionsSet('likert5',{ //Likert
-        inherit: 'basicSelect',
-        answers: [
-            {text:'Tout à fait d\'accord', value:5},
-			{text:'Plutôt d\'accord', value:4},
-			{text:'Ni d\'accord ni pas d\'accord', value:3},
-			{text:'Plutôt pas d\'accord', value:2},
-			{text:'Pas du tout d\'accord', value:1}
-        ]
-    });
+
+	API.addQuestionsSet('ressenti1',{
+		inherit: 'basicSelect', 
+		stem: 'En arrivant au CC2 de cette matière, vous sentiez-vous en confiance pour réussir ? <br><i>Les réponses sont données sur une échelle allant de 1 (très peu en confiance) à 5 (tout à fait en confiance). Si vous n\'avez pas suivi cette matière ou ce TD, cochez "Non concerné".</i>',
+		answers: [
+			{text: '1 - Très peu en confiance', value: 1},
+			{text: '2', value : 2},
+			{text: '3 - Moyennement en confiance', value: 3},
+			{text: '4', value: 4},
+			{text: '5 - Tout à fait en confiance', value: 5},
+			{text: 'Non concerné', value: 8}
+			]
+	});
+
+	API.addQuestionsSet('ressenti2',{
+		inherit: 'basicSelect', 
+		stem: 'Comment avez-vous perçu la façon dont le chargé de TD de cette matière s\'adressait à vous et répondait à vos questions ? <br><i>Les réponses sont données sur une échelle de 1 (désagréable et dévalorisante) à 5 (très agréable et valorisante). Si vous n\'avez pas suivi cette matière ou ce TD, cochez "Non concerné".</i>', 
+		answers: [
+			{text: '1 - Désagréable et dévalorisante', value: 1},
+			{text: '2', value : 2},
+			{text: '3', value: 3},
+			{text: '4', value: 4},
+			{text: '5 - Très agréable et valorisante', value: 5},
+			{text: 'Non concerné', value: 8}
+			]
+	});
+
+	API.addQuestionsSet('ressenti3',{
+		inherit: 'basicSelect', 
+		stem: 'Personnellement, pensez-vous avoir été traité différemment des autres étudiants dans cette matière, par exemple dans la façon dont l\'enseignant s\'adressait à vous, interagissait avec vous ou répondait à vos questions ? <br><i>Si vous n\'avez pas suivi cette matière ou ce TD, cochez "Non concerné".</i>',
+		answers: [
+			{text: '1 - Mieux traité', value: 1},
+			{text: '2 - Pareil', value : 2},
+			{text: '3 - Moins bien trainté', value: 3},
+			{text: 'Non concerné', value: 8}
+			]
+	});
+
+	API.addQuestionsSet('ressenti4',{
+		inherit: 'basicMulti', 
+		stem: 'D\'après vous, ces traitements différents dans ce TD pouvaient-ils être liés à ces différents éléments ?',
+		answers: [
+			{text: 'Votre sexe (le fait que vous soyez un homme ou une femme)', value: 1},
+			{text: 'Votre état de santé ou un handicap', value : 2},
+			{text: 'Votre couleur de peau', value: 3},
+			{text: 'Vos origines ou votre nationalité', value: 4},
+			{text: 'Votre religion', value: 5},
+			{text: 'Votre âge', value: 6},
+			{text: 'Autre', value: 7},
+			{text: 'Ne souhaite pas répondre / Ne sait pas', value: 8},
+			{text: 'Non concerné', value: 9}
+			]
+	});
 
 	
     /**
@@ -556,6 +598,1022 @@ define(['questAPI'], function(Quest){
 			{text : 'Non', value : 2},
 			{text : 'Ne sait pas', value : 8}
 			]
+	});
+
+	//L1
+	
+	API.addQuestionsSet('l1anglais1_1',{
+		inherit: 'ressenti1', 
+		name: 'l1anglais1_1',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l1anglais1_2',{
+		inherit: 'ressenti2', 
+		name: 'l1anglais1_2',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l1anglais1_3',{
+		inherit: 'ressenti3', 
+		name: 'l1anglais1_3',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l1anglais1_4',{
+		inherit: 'ressenti4', 
+		name: 'l1anglais1_4',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l1renfo_maths1',{
+		inherit: 'ressenti1', 
+		name: 'l1renfo_maths1',
+		header: 'Renforcement en mathématiques (S1)'
+	});
+
+	API.addQuestionsSet('l1renfo_maths2',{
+		inherit: 'ressenti2', 
+		name: 'l1renfo_maths2',
+		header: 'Renforcement en mathématiques (S1)'
+	});
+
+	API.addQuestionsSet('l1renfo_maths3',{
+		inherit: 'ressenti3', 
+		name: 'l1renfo_maths3',
+		header: 'Renforcement en mathématiques (S1)'
+	});
+
+	API.addQuestionsSet('l1renfo_maths4',{
+		inherit: 'ressenti4', 
+		name: 'l1renfo_maths4',
+		header: 'Renforcement en mathématiques (S1)'
+	});
+
+	API.addQuestionsSet('l1maths1_1',{
+		inherit: 'ressenti1', 
+		name: 'l1maths1_1',
+		header: 'Mathématiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1maths1_2',{
+		inherit: 'ressenti2', 
+		name: 'l1maths1_2',
+		header: 'Mathématiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1maths1_3',{
+		inherit: 'ressenti3', 
+		name: 'l1maths1_3',
+		header: 'Mathématiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1maths1_4',{
+		inherit: 'ressenti4', 
+		name: 'l1maths1_4',
+		header: 'Mathématiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1stats1_1',{
+		inherit: 'ressenti1', 
+		name: 'l1stats1_1',
+		header: 'Statistiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1stats1_2',{
+		inherit: 'ressenti2', 
+		name: 'l1stats1_2',
+		header: 'Statistiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1stats1_3',{
+		inherit: 'ressenti3', 
+		name: 'l1stats1_3',
+		header: 'Statistiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1stats1_4',{
+		inherit: 'ressenti4', 
+		name: 'l1stats1_4',
+		header: 'Statistiques 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_eco1',{
+		inherit: 'ressenti1', 
+		name: 'l1intro_eco1',
+		header: 'Introduction à l\'éonomie (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_eco2',{
+		inherit: 'ressenti2', 
+		name: 'l1intro_eco2',
+		header: 'Introduction à l\'éonomie 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_eco3',{
+		inherit: 'ressenti3', 
+		name: 'l1intro_eco3',
+		header: 'Introduction à l\'éonomie 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_eco4',{
+		inherit: 'ressenti4', 
+		name: 'l1intro_eco4',
+		header: 'Introduction à l\'éonomie 1 (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_gest1',{
+		inherit: 'ressenti1', 
+		name: 'l1intro_gest1',
+		header: 'Introduction à la gestion et au management (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_gest2',{
+		inherit: 'ressenti2', 
+		name: 'l1intro_gest2',
+		header: 'Introduction à la gestion et au management (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_gest3',{
+		inherit: 'ressenti3', 
+		name: 'l1intro_gest3',
+		header: 'Introduction à la gestion et au management (S1)'
+	});
+
+	API.addQuestionsSet('l1intro_gest4',{
+		inherit: 'ressenti4', 
+		name: 'l1intro_gest4',
+		header: 'Introduction à la gestion et au management (S1)'
+	});
+
+	API.addQuestionsSet('l1micro1_1',{
+		inherit: 'ressenti1', 
+		name: 'l1micro1_1',
+		header: 'Microéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1micro1_2',{
+		inherit: 'ressenti2', 
+		name: 'l1micro1_2',
+		header: 'Microéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1micro1_3',{
+		inherit: 'ressenti3', 
+		name: 'l1micro1_3',
+		header: 'Microéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1micro1_4',{
+		inherit: 'ressenti4', 
+		name: 'l1micro1_4',
+		header: 'Microéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1macro1_1',{
+		inherit: 'ressenti1', 
+		name: 'l1macro1_1',
+		header: 'Macroéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1macro1_2',{
+		inherit: 'ressenti2', 
+		name: 'l1macro1_2',
+		header: 'Macroéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1macro1_3',{
+		inherit: 'ressenti3', 
+		name: 'l1macro1_3',
+		header: 'Macroéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1macro1_4',{
+		inherit: 'ressenti4', 
+		name: 'l1macro1_4',
+		header: 'Macroéconomie 1 (S2)'
+	});
+
+	API.addQuestionsSet('l1enjeux_manag1',{
+		inherit: 'ressenti1', 
+		name: 'l1enjeux_manag1',
+		header: 'Enjeux du management des organisations (S2)'
+	});
+
+	API.addQuestionsSet('l1enjeux_manag2',{
+		inherit: 'ressenti2', 
+		name: 'l1enjeux_manag2',
+		header: 'Enjeux du management des organisations (S2)'
+	});
+
+	API.addQuestionsSet('l1enjeux_manag3',{
+		inherit: 'ressenti3', 
+		name: 'l1enjeux_manag3',
+		header: 'Enjeux du management des organisations (S2)'
+	});
+
+	API.addQuestionsSet('l1enjeux_manag4',{
+		inherit: 'ressenti4', 
+		name: 'l1enjeux_manag4',
+		header: 'Enjeux du management des organisations (S2)'
+	});
+
+	API.addQuestionsSet('l1compta1_1',{
+		inherit: 'ressenti1', 
+		name: 'l1compta1_1',
+		header: 'Comptabilité générale (S2)'
+	});
+
+	API.addQuestionsSet('l1compta1_2',{
+		inherit: 'ressenti2', 
+		name: 'l1compta1_2',
+		header: 'Comptabilité générale (S2)'
+	});
+
+	API.addQuestionsSet('l1compta1_3',{
+		inherit: 'ressenti3', 
+		name: 'l1compta1_3',
+		header: 'Comptabilité générale (S2)'
+	});
+
+	API.addQuestionsSet('l1compta1_4',{
+		inherit: 'ressenti4', 
+		name: 'l1compta1_4',
+		header: 'Comptabilité générale (S2)'
+	});
+
+	API.addQuestionsSet('l1anglais2_1',{
+		inherit: 'ressenti1', 
+		name: 'l1anglais2_1',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l1anglais2_2',{
+		inherit: 'ressenti2', 
+		name: 'l1anglais2_2',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l1anglais2_3',{
+		inherit: 'ressenti3', 
+		name: 'l1anglais2_3',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l1anglais2_4',{
+		inherit: 'ressenti4', 
+		name: 'l1anglais2_4',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l1maths2_1',{
+		inherit: 'ressenti1', 
+		name: 'l1maths2_1',
+		header: 'Mathématiques 2 (S2)'
+	});
+
+	API.addQuestionsSet('l1maths2_2',{
+		inherit: 'ressenti2', 
+		name: 'l1maths2_2',
+		header: 'Mathématiques 2 (S2)'
+	});
+
+	API.addQuestionsSet('l1maths2_3',{
+		inherit: 'ressenti3', 
+		name: 'l1maths2_3',
+		header: 'Mathématiques 2 (S2)'
+	});
+
+	API.addQuestionsSet('l1maths2_4',{
+		inherit: 'ressenti4', 
+		name: 'l1maths2_4',
+		header: 'Mathématiques 2 (S2)'
+	});
+
+	API.addQuestionsSet('sl1tats2_1',{
+		inherit: 'ressenti1', 
+		name: 'l1stats2_1',
+		header: 'Statistiques 2 (S2)'
+	});
+
+	API.addQuestionsSet('l1stats2_2',{
+		inherit: 'ressenti2', 
+		name: 'l1stats2_2',
+		header: 'Statistiques 2 (S2)'
+	});
+
+	API.addQuestionsSet('l1stats2_3',{
+		inherit: 'ressenti3', 
+		name: 'l1stats2_3',
+		header: 'Statistiques 2 (S2)'
+	});
+
+	API.addQuestionsSet('l1stats2_4',{
+		inherit: 'ressenti4', 
+		name: 'l1stats2_4',
+		header: 'Statistiques 2 (S2)'
+	});
+
+	//L2
+
+	API.addQuestionsSet('l2micro2_1',{
+		inherit: 'ressenti1', 
+		name: 'l2micro2_1',
+		header: 'Microéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2micro2_2',{
+		inherit: 'ressenti2', 
+		name: 'l2micro2_2',
+		header: 'Microéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2micro2_3',{
+		inherit: 'ressenti3', 
+		name: 'l2micro2_3',
+		header: 'Microéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2micro2_4',{
+		inherit: 'ressenti4', 
+		name: 'l2micro2_4',
+		header: 'Microéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2macro2_1',{
+		inherit: 'ressenti1', 
+		name: 'l2macro2_1',
+		header: 'Macroéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2macro2_2',{
+		inherit: 'ressenti2', 
+		name: 'l2macro2_2',
+		header: 'Macroéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2macro2_3',{
+		inherit: 'ressenti3', 
+		name: 'l2macro2_3',
+		header: 'Macroéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2macro2_4',{
+		inherit: 'ressenti4', 
+		name: 'l2macro2_4',
+		header: 'Macroéconomie 2 (S1)'
+	});
+
+	API.addQuestionsSet('l2compta2_1',{
+		inherit: 'ressenti1', 
+		name: 'l2compta2_1',
+		header: 'Comptabilité générale (S1)'
+	});
+
+	API.addQuestionsSet('l2compta2_2',{
+		inherit: 'ressenti2', 
+		name: 'l2compta2_2',
+		header: 'Comptabilité générale (S1)'
+	});
+
+	API.addQuestionsSet('l2compta2_3',{
+		inherit: 'ressenti3', 
+		name: 'l2compta2_3',
+		header: 'Comptabilité générale (S1)'
+	});
+
+	API.addQuestionsSet('l2compta2_4',{
+		inherit: 'ressenti4', 
+		name: 'l2compta2_4',
+		header: 'Comptabilité générale (S1)'
+	});
+
+	API.addQuestionsSet('l2intro_rh1',{
+		inherit: 'ressenti1', 
+		name: 'l2intro_rh1',
+		header: 'Introduction aux ressources humaines (S1)'
+	});
+
+	API.addQuestionsSet('l2intro_rh2',{
+		inherit: 'ressenti2', 
+		name: 'l2intro_rh2',
+		header: 'Introduction aux ressources humaines (S1)'
+	});
+
+	API.addQuestionsSet('l2intro_rh3',{
+		inherit: 'ressenti3', 
+		name: 'l2intro_rh3',
+		header: 'Introduction aux ressources humaines (S1)'
+	});
+
+	API.addQuestionsSet('l2intro_rh4',{
+		inherit: 'ressenti4', 
+		name: 'l2intro_rh4',
+		header: 'Etudes marketing (S1)'
+	});
+
+	API.addQuestionsSet('l2etudes_mark1',{
+		inherit: 'ressenti1', 
+		name: 'l2etudes_mark1',
+		header: 'Etudes marketing (S1)'
+	});
+
+	API.addQuestionsSet('l2etudes_mark2',{
+		inherit: 'ressenti2', 
+		name: 'l2etudes_mark2',
+		header: 'Etudes marketing (S1)'
+	});
+
+	API.addQuestionsSet('l2etudes_mark3',{
+		inherit: 'ressenti3', 
+		name: 'l2etudes_mark3',
+		header: 'Etudes marketing (S1)'
+	});
+
+	API.addQuestionsSet('l2etudes_mark4',{
+		inherit: 'ressenti4', 
+		name: 'l2etudes_mark4',
+		header: 'Etudes marketing (S1)'
+	});
+
+	API.addQuestionsSet('l2maths3_1',{
+		inherit: 'ressenti1', 
+		name: 'l2maths3_1',
+		header: 'Mathématiques 3 (S1)'
+	});
+
+	API.addQuestionsSet('l2maths3_2',{
+		inherit: 'ressenti2', 
+		name: 'l2maths3_2',
+		header: 'Mathématiques 3 (S1)'
+	});
+
+	API.addQuestionsSet('l2maths3_3',{
+		inherit: 'ressenti3', 
+		name: 'l2maths3_3',
+		header: 'Mathématiques 3 (S1)'
+	});
+
+	API.addQuestionsSet('l2maths3_4',{
+		inherit: 'ressenti4', 
+		name: 'l2maths3_4',
+		header: 'Mathématiques 3 (S1)'
+	});
+
+	API.addQuestionsSet('l2proba1_1',{
+		inherit: 'ressenti1', 
+		name: 'l2proba1_1',
+		header: 'Probabilités (S1)'
+	});
+
+	API.addQuestionsSet('l2proba1_2',{
+		inherit: 'ressenti2', 
+		name: 'l2proba1_2',
+		header: 'Probabilités (S1)'
+	});
+
+	API.addQuestionsSet('l2proba1_3',{
+		inherit: 'ressenti3', 
+		name: 'l2proba1_3',
+		header: 'Probabilités (S1)'
+	});
+
+	API.addQuestionsSet('l2proba1_4',{
+		inherit: 'ressenti4', 
+		name: 'l2proba1_4',
+		header: 'Probabilités (S1)'
+	});
+
+	API.addQuestionsSet('l2anglais3_1',{
+		inherit: 'ressenti1', 
+		name: 'l2anglais3_1',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l2anglais3_2',{
+		inherit: 'ressenti2', 
+		name: 'l2anglais3_2',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l2anglais3_3',{
+		inherit: 'ressenti3', 
+		name: 'l2anglais3_3',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l2anglais3_4',{
+		inherit: 'ressenti4', 
+		name: 'l2anglais3_4',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l2macro3_1',{
+		inherit: 'ressenti1', 
+		name: 'l2macro3_1',
+		header: 'Macroéconomie 3 (S2)'
+	});
+
+	API.addQuestionsSet('l2macro3_2',{
+		inherit: 'ressenti2', 
+		name: 'l2macro3_2',
+		header: 'Macroéconomie 2 (S2)'
+	});
+
+	API.addQuestionsSet('l2macro3_3',{
+		inherit: 'ressenti3', 
+		name: 'l2macro3_3',
+		header: 'Macroéconomie 3 (S2)'
+	});
+
+	API.addQuestionsSet('l2macro3_4',{
+		inherit: 'ressenti4', 
+		name: 'l2macro3_4',
+		header: 'Macroéconomie 4 (S2)'
+	});
+
+	API.addQuestionsSet('l2pol_eco_soc1',{
+		inherit: 'ressenti1', 
+		name: 'l2pol_eco_soc1',
+		header: 'Politiques économiques et sociales (S2)'
+	});
+
+	API.addQuestionsSet('l2pol_eco_soc2',{
+		inherit: 'ressenti2', 
+		name: 'l2pol_eco_soc2',
+		header: 'Politiques économiques et sociales (S2)'
+	});
+
+	API.addQuestionsSet('l2pol_eco_soc3',{
+		inherit: 'ressenti3', 
+		name: 'l2pol_eco_soc3',
+		header: 'Politiques économiques et sociales (S2)'
+	});
+
+	API.addQuestionsSet('l2pol_eco_soc4',{
+		inherit: 'ressenti4', 
+		name: 'l2pol_eco_soc4',
+		header: 'Politiques économiques et sociales (S2)'
+	});
+
+	API.addQuestionsSet('l2mon_fi1',{
+		inherit: 'ressenti1', 
+		name: 'l2mon_fi1',
+		header: 'Monnaie et finance (S2)'
+	});
+
+	API.addQuestionsSet('l2mon_fi2',{
+		inherit: 'ressenti2', 
+		name: 'l2mon_fi2',
+		header: 'Monnaie et finance (S2)'
+	});
+
+	API.addQuestionsSet('l2mon_fi3',{
+		inherit: 'ressenti3', 
+		name: 'l2mon_fi3',
+		header: 'Monnaie et finance (S2)'
+	});
+
+	API.addQuestionsSet('l2mon_fi4',{
+		inherit: 'ressenti4', 
+		name: 'l2mon_fi4',
+		header: 'Monnaie et finance (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_fi1',{
+		inherit: 'ressenti1', 
+		name: 'l2analyse_fi1',
+		header: 'Analyse financière (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_fi2',{
+		inherit: 'ressenti2', 
+		name: 'l2analyse_fi2',
+		header: 'Analyse financière (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_fi3',{
+		inherit: 'ressenti3', 
+		name: 'l2analyse_fi3',
+		header: 'Analyse financière (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_fi4',{
+		inherit: 'ressenti4', 
+		name: 'l2analyse_fi4',
+		header: 'Analyse financière (S2)'
+	});
+
+	API.addQuestionsSet('l2gest_prod1',{
+		inherit: 'ressenti1', 
+		name: 'l2gest_prod1',
+		header: 'Gestion de production (S2)'
+	});
+
+	API.addQuestionsSet('l2gest_prod2',{
+		inherit: 'ressenti2', 
+		name: 'l2gest_prod2',
+		header: 'Gestion de production (S2)'
+	});
+
+	API.addQuestionsSet('l2gest_prod3',{
+		inherit: 'ressenti3', 
+		name: 'l2gest_prod3',
+		header: 'Gestion de production (S2)'
+	});
+
+	API.addQuestionsSet('l2gest_prod4',{
+		inherit: 'ressenti4', 
+		name: 'l2gest_prod4',
+		header: 'Gestion de production (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_don1',{
+		inherit: 'ressenti1', 
+		name: 'l2analyse_don1',
+		header: 'Analyse des données (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_don2',{
+		inherit: 'ressenti2', 
+		name: 'l2analyse_don2',
+		header: 'Analyse des données (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_don3',{
+		inherit: 'ressenti3', 
+		name: 'l2analyse_don3',
+		header: 'Analyse des données (S2)'
+	});
+
+	API.addQuestionsSet('l2analyse_don4',{
+		inherit: 'ressenti4', 
+		name: 'l2analyse_don4',
+		header: 'Analyse des données (S2)'
+	});
+
+	API.addQuestionsSet('l2anglais4_1',{
+		inherit: 'ressenti1', 
+		name: 'l2anglais4_1',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l2anglais4_2',{
+		inherit: 'ressenti2', 
+		name: 'l2anglais4_2',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l2anglais4_3',{
+		inherit: 'ressenti3', 
+		name: 'l2anglais4_3',
+		header: 'Anglais (S2)'
+	});
+
+	API.addQuestionsSet('l2anglais4_4',{
+		inherit: 'ressenti4', 
+		name: 'l2anglais4_4',
+		header: 'Anglais (S2)'
+	});
+
+	//L3 eco
+
+	API.addQuestionsSet('l3croissance1',{
+		inherit: 'ressenti1', 
+		name: 'l3croissance1',
+		header: 'Croissance (S1)'
+	});
+
+	API.addQuestionsSet('l3croissance2',{
+		inherit: 'ressenti2', 
+		name: 'l3croissance2',
+		header: 'Croissance 2 (S1)'
+	});
+
+	API.addQuestionsSet('l3croissance3',{
+		inherit: 'ressenti3', 
+		name: 'l3croissance3',
+		header: 'Croissance 3 (S1)'
+	});
+
+	API.addQuestionsSet('l3croissance4',{
+		inherit: 'ressenti4', 
+		name: 'l3croissance4',
+		header: 'Croissance 4 (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_pub1',{
+		inherit: 'ressenti1', 
+		name: 'l3eco_pub1',
+		header: 'Economie publique (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_pub2',{
+		inherit: 'ressenti2', 
+		name: 'l3eco_pub2',
+		header: 'Economie publique (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_pub3',{
+		inherit: 'ressenti3', 
+		name: 'l3eco_pub3',
+		header: 'Economie publique 3 (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_pub4',{
+		inherit: 'ressenti4', 
+		name: 'l3eco_pub4',
+		header: 'Economie publique 4 (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_inter1',{
+		inherit: 'ressenti1', 
+		name: 'l3eco_inter1',
+		header: 'Economie internationale (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_inter2',{
+		inherit: 'ressenti2', 
+		name: 'l3eco_inter2',
+		header: 'Economie internationale (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_inter3',{
+		inherit: 'ressenti3', 
+		name: 'l3eco_inter3',
+		header: 'Economie internationale (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_inter4',{
+		inherit: 'ressenti4', 
+		name: 'l3eco_inter4',
+		header: 'Economie internationale (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_trav1',{
+		inherit: 'ressenti1', 
+		name: 'l3eco_trav1',
+		header: 'Economie du travail (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_trav2',{
+		inherit: 'ressenti2', 
+		name: 'l3eco_trav2',
+		header: 'Economie du travail (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_trav3',{
+		inherit: 'ressenti3', 
+		name: 'l3eco_trav3',
+		header: 'Economie du travail (S1)'
+	});
+
+	API.addQuestionsSet('l3eco_trav4',{
+		inherit: 'ressenti4', 
+		name: 'l3eco_trav4',
+		header: 'Economie du travail (S1)'
+	});
+
+	API.addQuestionsSet('l3econometrie1',{
+		inherit: 'ressenti1', 
+		name: 'l3econometrie1',
+		header: 'Econométrie (S1)'
+	});
+
+	API.addQuestionsSet('l3econometrie2',{
+		inherit: 'ressenti2', 
+		name: 'l3econometrie2',
+		header: 'Econométrie (S1)'
+	});
+
+	API.addQuestionsSet('l3econometrie3',{
+		inherit: 'ressenti3', 
+		name: 'l3econometrie3',
+		header: 'Econométrie (S1)'
+	});
+
+	API.addQuestionsSet('l3econometrie4',{
+		inherit: 'ressenti4', 
+		name: 'l3econometrie4',
+		header: 'Econométrie (S1)'
+	});
+
+	API.addQuestionsSet('l3app_r1_1',{
+		inherit: 'ressenti1', 
+		name: 'l3app_r1_1',
+		header: 'Application sous R (S1)'
+	});
+
+	API.addQuestionsSet('l3app_r1_2',{
+		inherit: 'ressenti2', 
+		name: 'l3app_r1_2',
+		header: 'Application sous R (S1)'
+	});
+
+	API.addQuestionsSet('l3app_r1_3',{
+		inherit: 'ressenti3', 
+		name: 'l3app_r1_3',
+		header: 'Application sous R (S1)'
+	});
+
+	API.addQuestionsSet('l3app_r1_4',{
+		inherit: 'ressenti4', 
+		name: 'l3app_r1_4',
+		header: 'Application sous R (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5e_1',{
+		inherit: 'ressenti1', 
+		name: 'l3anglais5_1',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5e_2',{
+		inherit: 'ressenti2', 
+		name: 'l3anglais5_2',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5e_3',{
+		inherit: 'ressenti3', 
+		name: 'l3anglais5_3',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais5e_4',{
+		inherit: 'ressenti4', 
+		name: 'l3anglais5_4',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3app_r2_1',{
+		inherit: 'ressenti1', 
+		name: 'l3app_r2_1',
+		header: 'Application sous R (S2)'
+	});
+
+	API.addQuestionsSet('l3app_r2_2',{
+		inherit: 'ressenti2', 
+		name: 'l3app_r2_2',
+		header: 'Application sous R (S2)'
+	});
+
+	API.addQuestionsSet('l3app_r2_3',{
+		inherit: 'ressenti3', 
+		name: 'l3app_r2_3',
+		header: 'Application sous R (S2)'
+	});
+
+	API.addQuestionsSet('l3app_r2_4',{
+		inherit: 'ressenti4', 
+		name: 'l3app_r2_4',
+		header: 'Application sous R (S2)'
+	});
+
+	API.addQuestionsSet('l3excel1',{
+		inherit: 'ressenti1', 
+		name: 'l3excel1',
+		header: 'Excel/VBA (S2)'
+	});
+
+	API.addQuestionsSet('l3excel2',{
+		inherit: 'ressenti2', 
+		name: 'l3excel2',
+		header: 'Excel/VBA (S2)'
+	});
+
+	API.addQuestionsSet('l3excel3',{
+		inherit: 'ressenti3', 
+		name: 'l3excel3',
+		header: 'Excel/VBA (S2)'
+	});
+
+	API.addQuestionsSet('l3excel4',{
+		inherit: 'ressenti4', 
+		name: 'l3excel4',
+		header: 'Excel/VBA (S2)'
+	});
+
+	API.addQuestionsSet('l3anglais6e_1',{
+		inherit: 'ressenti1', 
+		name: 'l3anglais5_1',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais6e_2',{
+		inherit: 'ressenti2', 
+		name: 'l3anglais5_2',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais6e_3',{
+		inherit: 'ressenti3', 
+		name: 'l3anglais5_3',
+		header: 'Anglais (S1)'
+	});
+
+	API.addQuestionsSet('l3anglais6e_4',{
+		inherit: 'ressenti4', 
+		name: 'l3anglais5_4',
+		header: 'Anglais (S1)'
+	});
+
+	//L3 gestion
+
+	API.addQuestionsSet('l3hpm1',{
+		inherit: 'ressenti1',
+		name: 'l3hpm1',
+		header: 'HPM et théorie des organisations (S1)'
+	});
+	
+	API.addQuestionsSet('l3hpm2',{
+		inherit: 'ressenti2',
+		name: 'l3hpm2',
+		header: 'HPM et théorie des organisations (S1)'
+	});
+
+	API.addQuestionsSet('l3hpm3',{
+		inherit: 'ressenti3',
+		name: 'l3hpm3',
+		header: 'HPM et théorie des organisations (S1)'
+	});
+
+	API.addQuestionsSet('l3hpm4',{
+		inherit: 'ressenti4',
+		name: 'l3hpm4',
+		header: 'HPM et théorie des organisations (S1)'
+	});
+
+	API.addQuestionsSet('l3controle_ges1',{
+		inherit: 'ressenti1',
+		name: 'l3controle_ges1',
+		header: 'Contrôle de gestion (S1)'
+	});
+	
+	API.addQuestionsSet('l3controle_ges2',{
+		inherit: 'ressenti2',
+		name: 'l3controle_ges2',
+		header: 'Contrôle de gestion (S1)'
+	});
+
+	API.addQuestionsSet('l3controle_ges3',{
+		inherit: 'ressenti3',
+		name: 'l3controle_ges3',
+		header: 'Contrôle de gestion (S1)'
+	});
+
+	API.addQuestionsSet('l3controle_ges4',{
+		inherit: 'ressenti4',
+		name: 'l3controle_ges4',
+		header: 'Contrôle de gestion (S1)'
+	});
+
+	API.addQuestionsSet('l3etude_march1',{
+		inherit: 'ressenti1',
+		name: 'l3etude_march1',
+		header: 'Etude de marché (S1)'
+	});
+	
+	API.addQuestionsSet('l3etude_march2',{
+		inherit: 'ressenti2',
+		name: 'l3etude_march2',
+		header: 'Etude de marché (S1)'
+	});
+
+	API.addQuestionsSet('l3etude_march3',{
+		inherit: 'ressenti3',
+		name: 'l3etude_march3',
+		header: 'Etude de marché (S1)'
+	});
+
+	API.addQuestionsSet('l3etude_march4',{
+		inherit: 'ressenti4',
+		name: 'l3etude_march4',
+		header: 'Ressources humaines et diagnostic opérationnel (S1)'
+	});
+
+	API.addQuestionsSet('l3rh1',{
+		inherit: 'ressenti1',
+		name: 'l3rh1',
+		header: 'Ressources humaines et diagnostic opérationnel (S1)'
+	});
+	
+	API.addQuestionsSet('l3rh2',{
+		inherit: 'ressenti2',
+		name: 'l3rh2',
+		header: 'Ressources humaines et diagnostic opérationnel (S1)'
+	});
+
+	API.addQuestionsSet('l3rh3',{
+		inherit: 'ressenti3',
+		name: 'l3rh3',
+		header: 'Ressources humaines et diagnostic opérationnel (S1)'
+	});
+
+	API.addQuestionsSet('l3rh4',{
+		inherit: 'ressenti4',
+		name: 'l3rh4',
+		header: 'Ressources humaines et diagnostic opérationnel (S1)'
 	});
 
 	
