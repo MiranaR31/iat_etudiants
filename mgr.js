@@ -92,12 +92,8 @@ define(['managerAPI',
             ]
         },
         
-        
         {inherit: 'intro'},
         {inherit: 'explicits'},
-
-        },
-
 		{inherit: 'uploading'},
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
