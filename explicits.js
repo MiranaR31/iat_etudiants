@@ -279,7 +279,7 @@ define(['questAPI'], function(Quest){
 		stem : 'Où êtes-vous né ?',
 		answers : [
 			{text : 'En France', value:1},
-			{text : 'A l'étranger', value : 2}
+			{text : 'A l\'étranger', value : 2}
 			]
 	});
 	
