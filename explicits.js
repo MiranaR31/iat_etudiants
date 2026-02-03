@@ -1860,34 +1860,60 @@ define(['questAPI'], function(Quest){
 
     API.addSequence([
 		//demographie
-		{inherit:'basicPage',questions:{inherit:'0'}},
+		
 		{inherit:'basicPage',questions:{inherit:'1'}},
 		{inherit:'basicPage',questions:{inherit:'2'}},
 		{inherit:'basicPage',questions:{inherit:'3'}},
 		{inherit:'basicPage',questions:{inherit:'4'}},
-		{inherit:'basicPage',
-		 condition : '<%= current.questions.lieu_naissance == 1 %>',
+		{inherit:'basicPage',questions:{inherit:'5'}},
+		 					
+		{inherit:'basicPage',      //si question 5 = 2, alors question 6
+		 condition : '<%= current.questions.lieu_naissance == 2 %>',
 		 questions:{inherit:'6'}},
-		{inherit:'basicPage',
-		 condition : '<%= current.questions.lieu_naissance == 2) %>',
-		 questions:{inherit:'5.1'}},
-		{inherit:'basicPage',
-		 condition : '<%= current.questions.annee_france_1 == 1) %>',
-		 questions:{inherit:'5.3'}},
-		{inherit:'basicPage',
-		 condition : '<%= current.questions.annee_france_1 == 2) %>',
-		 questions:{inherit:'5.2'}},
-		{inherit:'basicPage',questions:{inherit:'5.3'}},
-		{inherit:'basicPage',questions:{inherit:'6'}},
-		{inherit:'basicPage',questions:{inherit:'7'}},
-		{inherit:'basicPage',questions:{inherit:'8'}},
+		
+		{inherit:'basicPage',      //si question 6 = 999, alors question 7
+		 condition : '<%= current.questions.annee_france_1 == 999 %>',
+		 questions:{inherit:'7'}},
+		
+		{inherit:'basicPage',questions:{inherit:'8'}}, //tt le monde se rejoint ici
+		
 		{inherit:'basicPage',questions:{inherit:'9'}},
 		{inherit:'basicPage',questions:{inherit:'10'}},
 		{inherit:'basicPage',questions:{inherit:'11'}},
 		{inherit:'basicPage',questions:{inherit:'12'}},
-		{inherit:'basicPage',
-		 condition:'<%= parseInt(current.questions.bac_annee) < 2021 %>',
-		 questions:{inherit:
+
+		//parcours scolaire 
+		
+		{inherit:'basicPage',questions:{inherit:'13'}},
+		{inherit:'basicPage',questions:{inherit:'14'}},
+		{inherit:'basicPage',questions:{inherit:'15'}},
+		
+		{inherit:'basicPage', //si <2021 & 13 == 1, donc 16
+		 condition:'<%= parseInt(current.questions.bac_annee) < 2021 && current.questions.bac == 1 %>',
+		 questions:{inherit:'16'}},
+		{inherit:'basicPage', //si ≥ 2021 & 13 == 1 & 14 == 2, donc 16
+		 condition:'<%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac == 1 && current.questions.bac_fr == 2 %>',
+		 questions:{inherit:'16'}},
+		{inherit:'basicPage', //si ≥ 2021 & 13 == 1 & 14 == 1, donc 17
+		 condition:'<%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac == 1 && current.questions.bac_fr == 1 %>',
+		 questions:{inherit:'17'}},
+		{inherit:'basicPAge', //si 17 == 1, alors 19, sinon 18
+		 condition:'<%=current.questions.bac_specialité_term != 1 %>',
+		 questions::{inherit: '18'}},
+
+		{inherit: 'basicPage',questions:{inherit:'19'}},
+		{inherit: 'basicPage',questions:{inherit:'20'}},
+		{inherit: 'basicPage',questions:{inherit:'21'}},
+		{inherit: 'basicPage',
+		 condition:'<%= current.questions.niveau == 1 %>',
+		 questions: {inherit:'22'}},
+		{inherit: 'basicPage',
+		 condition:'<%= current.questions.niveau != 2 %>',
+		 questions: {inherit:'23'}},
+		
+		{inherit: 'basicPage',questions:{inherit:'24'}},
+		
+		
     ]);
 
 
