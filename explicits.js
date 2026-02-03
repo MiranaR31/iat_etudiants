@@ -69,7 +69,7 @@ define(['questAPI'], function(Quest){
 	*Specific questions
 	*/	
 	//Carctéristiques démographiques
-	API.addQuesionsSet('niveau',{
+	API.addQuestionsSet('0',{
 		inherit : 'basicSelect',
 		name : 'licence',
 		decline : false,
@@ -561,7 +561,7 @@ define(['questAPI'], function(Quest){
 
     API.addSequence([
 		//demographie
-		{inherit:'basicPage',questions:{inherit:'niveau'}},
+		{inherit:'basicPage',questions:{inherit:'0'}},
 		{inherit:'basicPage',questions:{inherit:'1'}},
 		{inherit:'basicPage',questions:{inherit:'2'}},
 		{inherit:'basicPage',questions:{inherit:'3'}},
