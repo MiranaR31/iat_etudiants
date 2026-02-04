@@ -321,7 +321,7 @@ define(['questAPI'], function(Quest){
 		decline: false, 
 		stem : 'Où êtes-vous né ?',
 		answers : [
-			{text : 'En France', value:1},
+			{text : 'En France', value: 1},
 			{text : 'A l\'étranger', value : 2}
 			]
 	});
@@ -1863,16 +1863,19 @@ define(['questAPI'], function(Quest){
 		//demographie
 		
 		{inherit:'basicPage',questions:{inherit:'1'}},
-		{inherit:'basicPage',questions:{inherit:'2'}},
-		{inherit:'basicPage',questions:{inherit:'3'}},
-		{inherit:'basicPage',questions:{inherit:'4'}},
-		{inherit:'basicPage',questions:{inherit:'5'}},
 		{inherit:'basicPage',
 	    questions: {
 	        inherit: 'basicQ',
 	        type: 'text',
 	        name: 'debug',
-	        stem: 'DEBUG : Valeur enregistrée pour Q5 = <%= current.questions.lieu_naissance %>'}},
+	        stem: 'DEBUG : Valeur enregistrée pour Q1 = <%= current.questions.niveau %>'}},
+
+		
+		{inherit:'basicPage',questions:{inherit:'2'}},
+		{inherit:'basicPage',questions:{inherit:'3'}},
+		{inherit:'basicPage',questions:{inherit:'4'}},
+		{inherit:'basicPage',questions:{inherit:'5'}},
+		
 		 					
 		{inherit:'basicPage',      //si question 5 = 2, alors question 6
 		 condition : '<%= current.questions.lieu_naissance == 2 %>',
