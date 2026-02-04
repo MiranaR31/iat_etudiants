@@ -1870,11 +1870,11 @@ define(['questAPI'], function(Quest){
 		
 		 					
 		{inherit:'basicPage',      //si question 5 = 2, alors question 6
-		 condition : '<%= current.questions.lieu_naissance.value == 2 %>',
+		 condition : '<%= current.questions.lieu_naissance && current.questions.lieu_naissance.value == 2 %>',
 		 questions:{inherit:'6'}},
 		
 		{inherit:'basicPage',      //si question 6 = 999, alors question 7
-		 condition : '<%= current.questions.lieu_naissance == 2 && current.questions.annee_france_1.value == 999 %>',
+		 condition : '<%=  current.questions.lieu_naissance && current.questions.lieu_naissance == 2 && current.questions.annee_france_1 && current.questions.annee_france_1.value == 999 %>',
 		 questions:{inherit:'7'}},
 		
 		{inherit:'basicPage',questions:{inherit:'8'}}, //tt le monde se rejoint ici
