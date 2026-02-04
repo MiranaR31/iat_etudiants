@@ -1869,11 +1869,11 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage',questions:{inherit:'5'}},
 		 					
 		{inherit:'basicPage',      //si question 5 = 2, alors question 6
-		 condition : '<%= current.questions.lieu_naissance.value === 2 %>',
+		 conditions : '<%= current.questions.lieu_naissance.value == 2 %>',
 		 questions:{inherit:'6'}},
 		
 		{inherit:'basicPage',      //si question 6 = 999, alors question 7
-		 condition : '<%=  current.questions.lieu_naissance === 2 && current.questions.annee_france_1.value === 999 %>',
+		 conditions : '<%=  current.questions.lieu_naissance == 2 && current.questions.annee_france_1.value == 999 %>',
 		 questions:{inherit:'7'}},
 		
 		{inherit:'basicPage',questions:{inherit:'8'}}, //tt le monde se rejoint ici
@@ -1889,27 +1889,27 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage',questions:{inherit:'14'}},
 		{inherit:'basicPage',questions:{inherit:'15'}},
 		
-		{inherit:'basicPage', //si <2021 & 13 === 1, donc 16
-		 condition:'<%= parseInt(current.questions.bac_annee) < 2021 && current.questions.bac.value === 1 %>',
+		{inherit:'basicPage', //si <2021 & 13 == 1, donc 16
+		 conditions:'<%= parseInt(current.questions.bac_annee) < 2021 && current.questions.bac.value == 1 %>',
 		 questions:{inherit:'16'}},
-		{inherit:'basicPage', //si ≥ 2021 & 13 === 1 & 14 === 2, donc 16
-		 condition:'<%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac.value === 1 && current.questions.bac_fr.value === 2 %>',
+		{inherit:'basicPage', //si ≥ 2021 & 13 == 1 & 14 == 2, donc 16
+		 conditions:'<%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac.value == 1 && current.questions.bac_fr.value == 2 %>',
 		 questions:{inherit:'16'}},
-		{inherit:'basicPage', //si ≥ 2021 & 13 === 1 & 14 === 1, donc 17
-		 condition:'<%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac.value === 1 && current.questions.bac_fr.value === 1 %>',
+		{inherit:'basicPage', //si ≥ 2021 & 13 == 1 & 14 == 1, donc 17
+		 conditions:'<%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac.value == 1 && current.questions.bac_fr.value == 1 %>',
 		 questions:{inherit:'17'}},
-		{inherit:'basicPAge', //si 17 === 1, alors 19, sinon 18
-		 condition:'<%= <%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac.value === 1 && current.questions.bac_fr.value === 1 && current.questions.bac_specialité_term.value != 1 %>',
+		{inherit:'basicPAge', //si 17 == 1, alors 19, sinon 18
+		 conditions:'<%= <%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac.value == 1 && current.questions.bac_fr.value == 1 && current.questions.bac_specialité_term.value != 1 %>',
 		 questions:{inherit: '18'}},
 
 		{inherit: 'basicPage',questions:{inherit:'19'}},
 		{inherit: 'basicPage',questions:{inherit:'20'}},
 		{inherit: 'basicPage',questions:{inherit:'21'}},
 		{inherit: 'basicPage',
-		 condition:'<%= current.questions.licence.value === 1 %>',
+		 conditions:'<%= current.questions.licence.value == 1 %>',
 		 questions: {inherit:'22'}},
 		{inherit: 'basicPage',
-		 condition:'<%= current.questions.licence.value != 2 %>',
+		 conditions:'<%= current.questions.licence.value != 2 %>',
 		 questions: {inherit:'23'}},
 		
 		{inherit: 'basicPage',questions:{inherit:'24'}},
@@ -1917,7 +1917,7 @@ define(['questAPI'], function(Quest){
 		//L1
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1anglais1_1'},
 			 {inherit:'l1anglais1_2'},
@@ -1927,7 +1927,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1renfo_maths1'},
 			 {inherit:'l1renfo_maths2'},
@@ -1937,7 +1937,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1maths1_1'},
 			 {inherit:'l1maths1_2'},
@@ -1947,7 +1947,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1stats1_1'},
 			 {inherit:'l1stats1_2'},
@@ -1957,7 +1957,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1intro_eco1'},
 			 {inherit:'l1intro_eco2'},
@@ -1967,7 +1967,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1intro_gest1'},
 			 {inherit:'l1intro_gest2'},
@@ -1977,7 +1977,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1micro1_1'},
 			 {inherit:'l1micro1_2'},
@@ -1987,7 +1987,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1macro1_1'},
 			 {inherit:'l1macro1_2'},
@@ -1997,7 +1997,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1enjeux_manag1'},
 			 {inherit:'l1enjeux_manag2'},
@@ -2007,7 +2007,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1compta1_1'},
 			 {inherit:'l1compta1_2'},
@@ -2017,7 +2017,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1anglais2_1'},
 			 {inherit:'l1anglais2_2'},
@@ -2027,7 +2027,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1maths2_1'},
 			 {inherit:'l1maths2_2'},
@@ -2037,7 +2037,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 1 %>',
+		 conditions: '<%= current.questions.licence.value == 1 %>',
 		 questions:[
 			 {inherit:'l1stats2_1'},
 			 {inherit:'l1stats2_2'},
@@ -2049,7 +2049,7 @@ define(['questAPI'], function(Quest){
 		//L2
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2micro2_1'},
 			 {inherit:'l2micro2_2'},
@@ -2059,7 +2059,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2macro2_1'},
 			 {inherit:'l2macro2_2'},
@@ -2069,7 +2069,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2compta2_1'},
 			 {inherit:'l2compta2_2'},
@@ -2079,7 +2079,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2intro_rh1'},
 			 {inherit:'l2intro_rh2'},
@@ -2089,7 +2089,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2etudes_mark1'},
 			 {inherit:'l2etudes_mark2'},
@@ -2099,7 +2099,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2maths3_1'},
 			 {inherit:'l2maths3_2'},
@@ -2109,7 +2109,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2proba1_1'},
 			 {inherit:'l2proba1_2'},
@@ -2119,7 +2119,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2anglais3_1'},
 			 {inherit:'l2anglais3_2'},
@@ -2129,7 +2129,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2macro3_1'},
 			 {inherit:'l2macro3_2'},
@@ -2139,7 +2139,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2pol_eco_soc1'},
 			 {inherit:'l2pol_eco_soc2'},
@@ -2149,7 +2149,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2mon_fi1'},
 			 {inherit:'l2mon_fi2'},
@@ -2159,7 +2159,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2analyse_fi1'},
 			 {inherit:'l2analyse_fi2'},
@@ -2169,7 +2169,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2gest_prod1'},
 			 {inherit:'l2gest_prod2'},
@@ -2179,7 +2179,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2analyse_don1'},
 			 {inherit:'l2analyse_don2'},
@@ -2189,7 +2189,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 2 %>',
+		 conditions: '<%= current.questions.licence.value == 2 %>',
 		 questions:[
 			 {inherit:'l2anglais4_1'},
 			 {inherit:'l2anglais4_2'},
@@ -2201,7 +2201,7 @@ define(['questAPI'], function(Quest){
 		//L3 eco
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3croissance1'},
 			 {inherit:'l3croissance2'},
@@ -2211,7 +2211,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3eco_pub1'},
 			 {inherit:'l3eco_pub2'},
@@ -2221,7 +2221,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3eco_inter1'},
 			 {inherit:'l3eco_inter2'},
@@ -2231,7 +2231,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3eco_trav1'},
 			 {inherit:'l3eco_trav2'},
@@ -2241,7 +2241,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3econometrie1'},
 			 {inherit:'l3econometrie2'},
@@ -2251,7 +2251,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3app_r1_1'},
 			 {inherit:'l3app_r1_2'},
@@ -2261,7 +2261,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3anglais5e_1'},
 			 {inherit:'l3anglais5e_2'},
@@ -2271,7 +2271,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3app_r2_1'},
 			 {inherit:'l3app_r2_2'},
@@ -2281,7 +2281,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3excel1'},
 			 {inherit:'l3excel2'},
@@ -2291,7 +2291,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 3 %>',
+		 conditions: '<%= current.questions.licence.value == 3 %>',
 		 questions:[
 			 {inherit:'l3anglais6e_1'},
 			 {inherit:'l3anglais6e_2'},
@@ -2303,7 +2303,7 @@ define(['questAPI'], function(Quest){
 		//L3 gestion 
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3hpm1'},
 			 {inherit:'l3hpm2'},
@@ -2313,7 +2313,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3controle_ges1'},
 			 {inherit:'l3controle_ges2'},
@@ -2323,7 +2323,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3etude_march1'},
 			 {inherit:'l3etude_march2'},
@@ -2333,7 +2333,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3rh1'},
 			 {inherit:'l3rh2'},
@@ -2343,7 +2343,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3commerce1'},
 			 {inherit:'l3commerce2'},
@@ -2353,7 +2353,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3init_mark1'},
 			 {inherit:'l3init_mark2'},
@@ -2363,7 +2363,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3stats3_1'},
 			 {inherit:'l3stats3_2'},
@@ -2373,7 +2373,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3anglais5g_1'},
 			 {inherit:'l3anglais5g_2'},
@@ -2383,7 +2383,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3diag_org1'},
 			 {inherit:'l3diag_org2'},
@@ -2393,7 +2393,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3fi_entreprise1'},
 			 {inherit:'l3fi_entreprise2'},
@@ -2403,7 +2403,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3etude1'},
 			 {inherit:'l3etude2'},
@@ -2413,7 +2413,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3anglais6g_1'},
 			 {inherit:'l3anglais6g_2'},
@@ -2423,7 +2423,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.licence.value === 4 %>',
+		 conditions: '<%= current.questions.licence.value == 4 %>',
 		 questions:[
 			 {inherit:'l3com1'},
 			 {inherit:'l3com2'},
