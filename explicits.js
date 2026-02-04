@@ -57,12 +57,12 @@ define(['questAPI'], function(Quest){
 		inherit: 'basicSelect', 
 		stem: 'En arrivant au CC2 de cette matière, vous sentiez-vous en confiance pour réussir ? <br><i>Les réponses sont données sur une échelle allant de 1 (très peu en confiance) à 5 (tout à fait en confiance). Si vous n\'avez pas suivi cette matière ou ce TD, cochez "Non concerné".</i>',
 		answers: [
-			{text: '1 - Très peu en confiance', value: 1},
-			{text: '2', value : 2},
-			{text: '3 - Moyennement en confiance', value: 3},
-			{text: '4', value: 4},
-			{text: '5 - Tout à fait en confiance', value: 5},
-			{text: 'Non concerné', value: 8}
+			{text: '1 - Très peu en confiance', value:1},
+			{text: '2', value:2},
+			{text: '3 - Moyennement en confiance', value:3},
+			{text: '4', value:4},
+			{text: '5 - Tout à fait en confiance', value:5},
+			{text: 'Non concerné', value:8}
 			]
 	});
 
@@ -70,12 +70,12 @@ define(['questAPI'], function(Quest){
 		inherit: 'basicSelect', 
 		stem: 'Comment avez-vous perçu la façon dont le chargé de TD de cette matière s\'adressait à vous et répondait à vos questions ? <br><i>Les réponses sont données sur une échelle de 1 (désagréable et dévalorisante) à 5 (très agréable et valorisante). Si vous n\'avez pas suivi cette matière ou ce TD, cochez "Non concerné".</i>', 
 		answers: [
-			{text: '1 - Désagréable et dévalorisante', value: 1},
-			{text: '2', value : 2},
-			{text: '3', value: 3},
-			{text: '4', value: 4},
-			{text: '5 - Très agréable et valorisante', value: 5},
-			{text: 'Non concerné', value: 8}
+			{text: '1 - Désagréable et dévalorisante', value:1},
+			{text: '2', value:2},
+			{text: '3', value:3},
+			{text: '4', value:4},
+			{text: '5 - Très agréable et valorisante', value:5},
+			{text: 'Non concerné', value:8}
 			]
 	});
 
@@ -83,10 +83,10 @@ define(['questAPI'], function(Quest){
 		inherit: 'basicSelect', 
 		stem: 'Personnellement, pensez-vous avoir été traité différemment des autres étudiants dans cette matière, par exemple dans la façon dont l\'enseignant s\'adressait à vous, interagissait avec vous ou répondait à vos questions ? <br><i>Si vous n\'avez pas suivi cette matière ou ce TD, cochez "Non concerné".</i>',
 		answers: [
-			{text: '1 - Mieux traité', value: 1},
-			{text: '2 - Pareil', value : 2},
-			{text: '3 - Moins bien trainté', value: 3},
-			{text: 'Non concerné', value: 8}
+			{text: '1 - Mieux traité', value:1},
+			{text: '2 - Pareil', value:2},
+			{text: '3 - Moins bien trainté', value:3},
+			{text: 'Non concerné', value:8}
 			]
 	});
 
@@ -94,15 +94,15 @@ define(['questAPI'], function(Quest){
 		inherit: 'basicMulti', 
 		stem: 'D\'après vous, ces traitements différents dans ce TD pouvaient-ils être liés à ces différents éléments ?',
 		answers: [
-			{text: 'Votre sexe (le fait que vous soyez un homme ou une femme)', value: 1},
-			{text: 'Votre état de santé ou un handicap', value : 2},
-			{text: 'Votre couleur de peau', value: 3},
-			{text: 'Vos origines ou votre nationalité', value: 4},
-			{text: 'Votre religion', value: 5},
-			{text: 'Votre âge', value: 6},
-			{text: 'Autre', value: 7},
-			{text: 'Ne souhaite pas répondre / Ne sait pas', value: 8},
-			{text: 'Non concerné', value: 9}
+			{text: 'Votre sexe (le fait que vous soyez un homme ou une femme)', value:1},
+			{text: 'Votre état de santé ou un handicap', value:2},
+			{text: 'Votre couleur de peau', value:3},
+			{text: 'Vos origines ou votre nationalité', value:4},
+			{text: 'Votre religion', value:5},
+			{text: 'Votre âge', value:6},
+			{text: 'Autre', value:7},
+			{text: 'Ne souhaite pas répondre / Ne sait pas', value:8},
+			{text: 'Non concerné', value:9}
 			]
 	});
 
@@ -117,10 +117,10 @@ define(['questAPI'], function(Quest){
 		decline : false,
 		stem : 'Vous êtes actuellement en :', 
 		answers : [
-			{text : 'L1', value: 1},
-			{text : 'L2', value : 2},
-			{text : 'L3 Economie', value : 3},
-			{text : 'L3 Gestion des entreprises', value: 4}
+			{text : 'L1', value:1},
+			{text : 'L2', value:2},
+			{text : 'L3 Economie', value:3},
+			{text : 'L3 Gestion des entreprises', value:4}
 			]
 	});
 	
@@ -130,8 +130,8 @@ define(['questAPI'], function(Quest){
 		decline : false,
 		stem : 'Quel est votre sexe à l\'état-civil ?',
 		answers : [
-			{text : 'Homme'},
-			{text : 'Femme'},
+			{text : 'Homme', value:1},
+			{text : 'Femme', value:2},
 				]
 	});
 
@@ -321,8 +321,8 @@ define(['questAPI'], function(Quest){
 		decline: false, 
 		stem : 'Où êtes-vous né(e) ?',
 		answers : [
-			{text : 'En France', value: 1},
-			{text : 'A l\'étranger', value : 2}
+			{text : 'En France', value:1},
+			{text : 'A l\'étranger', value:2}
 			]
 	});
 	
@@ -332,38 +332,38 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'A quel âge vous êtes-vous installés en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
 		answers : [
-			{text : '0', value : 0},
-			{text : '1', value : 1},
-			{text : '2', value : 2},
-			{text : '3', value : 3},
-			{text : '4', value : 4},
-			{text : '5', value : 5},
-			{text : '6', value : 6},
-			{text : '7', value : 7},
-			{text : '8', value : 8},
-			{text : '9', value : 9},
-			{text : '10', value : 10},
-			{text : '11', value : 11},
-			{text : '12', value : 12},
-			{text : '13', value : 13},
-			{text : '14', value : 14},
-			{text : '15', value : 15},
-			{text : '16', value : 16},
-			{text : '17', value : 17},
-			{text : '18', value : 18},
-			{text : '19', value : 19},
-			{text : '20', value : 20},
-			{text : '21', value : 21},
-			{text : '22', value : 22},
-			{text : '23', value : 23},
-			{text : '24', value : 24},
-			{text : '25', value : 25},
-			{text : '26', value : 26},
-			{text : '27', value : 27},
-			{text : '28', value : 28},
-			{text : '29', value : 29},
-			{text : '30', value : 30},
-			{text : 'Ne sait pas', value : 999}
+			{text : '0', value:0},
+			{text : '1', value:1},
+			{text : '2', value:2},
+			{text : '3', value:3},
+			{text : '4', value:4},
+			{text : '5', value:5},
+			{text : '6', value:6},
+			{text : '7', value:7},
+			{text : '8', value:8},
+			{text : '9', value:9},
+			{text : '10', value:10},
+			{text : '11', value:11},
+			{text : '12', value:12},
+			{text : '13', value:13},
+			{text : '14', value:14},
+			{text : '15', value:15},
+			{text : '16', value:16},
+			{text : '17', value:17},
+			{text : '18', value:18},
+			{text : '19', value:19},
+			{text : '20', value:20},
+			{text : '21', value:21},
+			{text : '22', value:22},
+			{text : '23', value:23},
+			{text : '24', value:24},
+			{text : '25', value:25},
+			{text : '26', value:26},
+			{text : '27', value:27},
+			{text : '28', value:28},
+			{text : '29', value:29},
+			{text : '30', value:30},
+			{text : 'Ne sait pas', value:999}
 			]
 	});
 
@@ -373,11 +373,11 @@ define(['questAPI'], function(Quest){
 		decline: false, 
 		stem : 'A quel âge vous êtes-vous installés en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
 		answers : [
-			{text : 'Avant 5 ans', value: 1},
-			{text : 'Entre 5 et 10 ans', value: 2},
-			{text : 'Entre 11 et 15 ans', value: 3},
-			{text : 'Entre 15 et 18 ans', value: 4},
-			{text : 'Après 18 ans', value: 5}
+			{text : 'Avant 5 ans', value:1},
+			{text : 'Entre 5 et 10 ans', value:2},
+			{text : 'Entre 11 et 15 ans', value:3},
+			{text : 'Entre 15 et 18 ans', value:4},
+			{text : 'Après 18 ans', value:5}
 			]
 	});
 
@@ -387,8 +387,8 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Parliez-vous français au sein de votre famille durant votre enfance ?',
 		answers : [
-			{text : 'Oui', value: 1},
-			{text : 'Non', value: 2}
+			{text : 'Oui', value:1},
+			{text : 'Non', value:2}
 			]
 	});
 
@@ -398,13 +398,13 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Quel est le plus haut diplôme détenu par votre père ?',
 		answers : [
-			{text : 'Aucun diplôme', value : 1},
-			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de licence équivalent)',value: 2},
+			{text : 'Aucun diplôme', value:1},
+			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de licence équivalent)',value:2},
 			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de licence équivalent',value:3},
-			{text : 'Diplôme de licence BAC+2 (DEUG,BTS ou équivalent)', value: 4},
+			{text : 'Diplôme de licence BAC+2 (DEUG,BTS ou équivalent)', value:4},
 			{text : 'Diplôme de licence BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
-			{text : 'Diplôme de licence BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
-			{text : 'Ne sait pas', value: 8}
+			{text : 'Diplôme de licence BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value:6},
+			{text : 'Ne sait pas', value:8}
 			]
 	});
 
@@ -414,13 +414,13 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Quel est le plus haut diplôme détenu par votre mère ?',
 		answers : [
-			{text : 'Aucun diplôme', value : 1},
-			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de licence équivalent)',value: 2},
+			{text : 'Aucun diplôme', value:1},
+			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de licence équivalent)',value:2},
 			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de licence équivalent',value:3},
-			{text : 'Diplôme de licence BAC+2 (DEUG,BTS ou équivalent)', value: 4},
+			{text : 'Diplôme de licence BAC+2 (DEUG,BTS ou équivalent)', value:4},
 			{text : 'Diplôme de licence BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
-			{text : 'Diplôme de licence BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
-			{text : 'Ne sait pas', value: 8}
+			{text : 'Diplôme de licence BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value:6},
+			{text : 'Ne sait pas', value:8}
 			]
 	});
 
@@ -430,12 +430,12 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Quelle est la situation actuelle ou la dernière situation de votre père ?',
 		answers : [
-			{text : 'Salarié', value : 1},
-			{text : 'A son compte ou indépendant', value : 2},
-			{text : 'Au chômage (inscrit ou non à France Travail', value : 3},
-			{text : 'Homme au foyer', value : 4},
-			{text : 'Retraité ou retiré des affaires ou en préretraite', value : 5},
-			{text : 'Autre', value : 8}
+			{text : 'Salarié', value:1},
+			{text : 'A son compte ou indépendant', value:2},
+			{text : 'Au chômage (inscrit ou non à France Travail', value:3},
+			{text : 'Homme au foyer', value:4},
+			{text : 'Retraité ou retiré des affaires ou en préretraite', value:5},
+			{text : 'Autre', value:8}
 			]
 	});
 
@@ -445,12 +445,12 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Quelle est la situation actuelle ou la dernière situation de votre mère ?',
 		answers : [
-			{text : 'Salariée', value : 1},
-			{text : 'A son compte ou indépendant', value : 2},
-			{text : 'Au chômage (inscrit ou non à France Travail', value : 3},
-			{text : 'Femme au foyer', value : 4},
-			{text : 'Retraitée ou retirée des affaires ou en préretraite', value : 5},
-			{text : 'Autre', value : 8}
+			{text : 'Salariée', value:1},
+			{text : 'A son compte ou indépendant', value:2},
+			{text : 'Au chômage (inscrit ou non à France Travail', value:3},
+			{text : 'Femme au foyer', value:4},
+			{text : 'Retraitée ou retirée des affaires ou en préretraite', value:5},
+			{text : 'Autre', value:8}
 			]
 	});
 			
@@ -462,9 +462,9 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Quel baccalauréat avez-vous passé ?',
 		answers : [
-			{text : 'Général', value : 1},
-			{text : 'Professionnel', value : 2},
-			{text : 'Technologique', value : 3}
+			{text : 'Général', value:1},
+			{text : 'Professionnel', value:2},
+			{text : 'Technologique', value:3}
 			]
 	});
 
@@ -474,8 +474,8 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'S\'agit-il d\'un baccalauréat d\'un établissement français (y compris à l\'étranger)',
 		answers :[
-			{text : 'Oui', value : 1},
-			{text : 'Non', value : 2}
+			{text : 'Oui', value:1},
+			{text : 'Non', value:2}
 			]
 	});
 
@@ -493,10 +493,10 @@ define(['questAPI'], function(Quest){
 		decline: false, 
 		stem : 'Quelle était la série de votre baccalauréat général ?',
 		answers : [
-			{text : 'Série S (Scientifique)', value : 1},
-			{text : 'Série ES (Economique et Sociale)', value : 2},
-			{text : 'Série L (Littéraire)', value : 3},
-			{text : 'Autre', value : 4}
+			{text : 'Série S (Scientifique)', value:1},
+			{text : 'Série ES (Economique et Sociale)', value:2},
+			{text : 'Série L (Littéraire)', value:3},
+			{text : 'Autre', value:4}
 			]
 	});
 
@@ -506,11 +506,11 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Avez-vous suivi les enseignements suivants en terminale ? <i>Plusieurs réponses possibles</i>',
 		answers : [
-			{text : 'Enseignement de spécialité Mathématiques', value : 1},
-			{text : 'Enseignement de spécialité Sciences économiques et sociales', value : 2},
-			{text : 'Option Mathématiques Expertes', value : 3},
-			{text : 'Option Mathématiques Complémentaires', value : 4},
-			{text : 'Aucun des enseignements mentionnés', value : 5}
+			{text : 'Enseignement de spécialité Mathématiques', value:1},
+			{text : 'Enseignement de spécialité Sciences économiques et sociales', value:2},
+			{text : 'Option Mathématiques Expertes', value:3},
+			{text : 'Option Mathématiques Complémentaires', value:4},
+			{text : 'Aucun des enseignements mentionnés', value:5}
 			]
 	});
 
@@ -520,8 +520,8 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Avez-vous suivi l\'enseignement de spécialité de Mathématiques en Première ?',
 		answers : [
-			{text : 'Oui', value : 1},
-			{text : 'Non', value : 2}
+			{text : 'Oui', value:1},
+			{text : 'Non', value:2}
 			]
 	});
 
@@ -531,10 +531,10 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Quelle mention avez-vous eu au baccalauréat ?',
 		answers : [
-			{text : 'Mention passable / Aucune mention (moyenne entre 10 et 12)', value : 1},
-			{text : 'Mention assez bien (moyenne entre 12 et 14)', value : 2},
-			{text : 'Mention bien (moyenne entre 14 et 16)', value : 3},
-			{text : 'Mention très bien (moyenne entre 16 et 18)', value : 4}
+			{text : 'Mention passable / Aucune mention (moyenne entre 10 et 12)', value:1},
+			{text : 'Mention assez bien (moyenne entre 12 et 14)', value:2},
+			{text : 'Mention bien (moyenne entre 14 et 16)', value:3},
+			{text : 'Mention très bien (moyenne entre 16 et 18)', value:4}
 			]
 	});
 
@@ -545,12 +545,12 @@ define(['questAPI'], function(Quest){
 		decline : false, 
 		stem : 'Veuillez cocher les phrases qui correspondent à votre situation', 
 		answers : [
-			{text : 'Je dispose d\'un ordinateur portable.', value : 1},
-			{text : 'J\'ai un espace de travail personnel à mon domicile.', value : 2},
-			{text : 'Je dispose d\'un emploi de plus de 2 heures par semaine en parallèle de mes études.', value : 3},
-			{text : 'J\'habite chez mes parents.', value : 4},
-			{text : 'J\'habite chez d\'autres membres de ma famille.', value : 5},
-			{text : 'Je viens à l\'université en transport en commun.', value : 6}
+			{text : 'Je dispose d\'un ordinateur portable.', value:1},
+			{text : 'J\'ai un espace de travail personnel à mon domicile.', value:2},
+			{text : 'Je dispose d\'un emploi de plus de 2 heures par semaine en parallèle de mes études.', value:3},
+			{text : 'J\'habite chez mes parents.', value:4},
+			{text : 'J\'habite chez d\'autres membres de ma famille.', value:5},
+			{text : 'Je viens à l\'université en transport en commun.', value:6}
 			]
 	});
 
@@ -559,9 +559,9 @@ define(['questAPI'], function(Quest){
 		name : 'trajet',
 		stem : 'Combien de temps en moyenne mettez-vous pour venir à l\'université ?',
 		answers : [
-			{text : 'Moins de 30 minutes', value : 1},
-			{text : 'Entre 30 et 60 minutes', value : 2},
-			{text : 'Plus d\'une heure', value : 3}
+			{text : 'Moins de 30 minutes', value:1},
+			{text : 'Entre 30 et 60 minutes', value:2},
+			{text : 'Plus d\'une heure', value:3}
 			]
 	});
 
@@ -570,9 +570,9 @@ define(['questAPI'], function(Quest){
 		name : 'suite_licence', 
 		stem : 'Souhaitez-vous poursuivre vos études jusqu\'en L3 Economie et Gestion ?',
 		answers : [
-			{text : 'Oui', value : 1},
-			{text : 'Non', value : 2},
-			{text : 'Ne sait pas', value : 3}
+			{text : 'Oui', value:1},
+			{text : 'Non', value:2},
+			{text : 'Ne sait pas', value:3}
 			]
 	});
 
@@ -581,10 +581,10 @@ define(['questAPI'], function(Quest){
 		name : 'suite_etudes',
 		stem : 'Qu\'envisagez-vous après votre licence ?', 
 		answers : [
-			{text : 'Continuer dans le même domaine (économie ou gestion)', value : 1},
-			{text : 'Continuer mes études dans un autre domaine', value : 2},
-			{text : 'Arrêter mes études', value : 3},
-			{text : 'Ne sait pas', value : 8}
+			{text : 'Continuer dans le même domaine (économie ou gestion)', value:1},
+			{text : 'Continuer mes études dans un autre domaine', value:2},
+			{text : 'Arrêter mes études', value:3},
+			{text : 'Ne sait pas', value:8}
 			]
 	});
 
@@ -595,9 +595,9 @@ define(['questAPI'], function(Quest){
 		name : 'stereotypes', 
 		stem : 'Pensez-vous appartenir à un groupe envers lequel certains enseignants ont des stéréotypes ?',
 		answers : [
-			{text : 'Oui', value : 1}, 
-			{text : 'Non', value : 2},
-			{text : 'Ne sait pas', value : 8}
+			{text : 'Oui', value:1}, 
+			{text : 'Non', value:2},
+			{text : 'Ne sait pas', value:8}
 			]
 	});
 
