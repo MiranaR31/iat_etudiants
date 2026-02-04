@@ -1867,6 +1867,12 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage',questions:{inherit:'3'}},
 		{inherit:'basicPage',questions:{inherit:'4'}},
 		{inherit:'basicPage',questions:{inherit:'5'}},
+		{inherit:'basicPage',
+	    questions: {
+	        inherit: 'basicQ',
+	        type: 'text',
+	        name: 'debug',
+	        stem: 'DEBUG : Valeur enregistrée pour Q5 = <%= current.questions.lieu_naissance %>'}},
 		 					
 		{inherit:'basicPage',      //si question 5 = 2, alors question 6
 		 condition : '<%= current.questions.lieu_naissance == 2 %>',
