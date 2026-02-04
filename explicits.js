@@ -1858,7 +1858,7 @@ define(['questAPI'], function(Quest){
 	});
 
 	
-
+//séquence
     API.addSequence([
 		//demographie
 		
@@ -1873,7 +1873,7 @@ define(['questAPI'], function(Quest){
 		 questions:{inherit:'6'}},
 		
 		{inherit:'basicPage',      //si question 6 = 999, alors question 7
-		 condition : '<%= current.questions.annee_france_1 == 999 %>',
+		 condition : '<%= current.questions.lieu_naissance == 2 && current.questions.annee_france_1 == 999 %>',
 		 questions:{inherit:'7'}},
 		
 		{inherit:'basicPage',questions:{inherit:'8'}}, //tt le monde se rejoint ici
@@ -1899,7 +1899,7 @@ define(['questAPI'], function(Quest){
 		 condition:'<%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac == 1 && current.questions.bac_fr == 1 %>',
 		 questions:{inherit:'17'}},
 		{inherit:'basicPAge', //si 17 == 1, alors 19, sinon 18
-		 condition:'<%=current.questions.bac_specialité_term != 1 %>',
+		 condition:'<%= <%= parseInt(current.questions.bac_annee) >= 2021 && current.questions.bac == 1 && current.questions.bac_fr == 1 && current.questions.bac_specialité_term != 1 %>',
 		 questions:{inherit: '18'}},
 
 		{inherit: 'basicPage',questions:{inherit:'19'}},
