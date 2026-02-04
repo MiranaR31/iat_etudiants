@@ -1869,7 +1869,7 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage',questions:{inherit:'5'}},
 		 					
 		{inherit:'basicPage',      //si question 5 = 2, alors question 6
-		 condition : '<%= current.questions.lieu_naissance.value ==== 2 %>',
+		 condition : '<%= current.questions.lieu_naissance.value === 2 %>',
 		 questions:{inherit:'6'}},
 		
 		{inherit:'basicPage',      //si question 6 = 999, alors question 7
