@@ -1849,6 +1849,16 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage',questions:{inherit:'3'}},
 		{inherit:'basicPage',questions:{inherit:'4'}},
 		{inherit:'basicPage',questions:{inherit:'5'}},
+
+// DEBUG amélioré
+{
+    inherit:'basicPage',
+    questions: {
+        type: 'text',
+        name: 'debug',
+        stem: 'DEBUG : Type = <%= typeof current.questions.lieu_naissance %> | Valeur = <%= JSON.stringify(current.questions.lieu_naissance) %>'
+    }
+},
 		 					
 		{inherit:'basicPage',      //si question 5 = 2, alors question 6
 		 conditions : '<%= current.questions.lieu_naissance.value == 2 %>',
