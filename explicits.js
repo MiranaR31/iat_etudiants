@@ -314,23 +314,12 @@ define(['questAPI'], function(Quest){
 			number : 'Veuillez entrer un nombre valide'
 		}
 	});
-API.addQuestionsSet('1',{
-		inherit : 'basicSelect',
-		name : 'licence',
-		decline : false,
-		stem : 'Vous êtes actuellement en :', 
-		answers : [
-			{text : 'L1', value: 1},
-			{text : 'L2', value : 2},
-			{text : 'L3 Economie', value : 3},
-			{text : 'L3 Gestion des entreprises', value: 4}
-			]
-	});
+
 	API.addQuestionsSet('5',{
 		inherit : 'basicSelect',
 		name : 'lieu_naissance',
 		decline: false, 
-		stem : 'Où êtes-vous né ?',
+		stem : 'Où êtes-vous né(e) ?',
 		answers : [
 			{text : 'En France', value: 1},
 			{text : 'A l\'étranger', value : 2}
