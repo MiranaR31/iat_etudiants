@@ -19,7 +19,7 @@ define(['questAPI'], function(Quest){
 	* Question prototypes
 	*/
     API.addQuestionsSet('basicQ',{
-        decline: 'true',
+        decline: 'false',
         required : true, 		
         errorMsg: {
             required: isTouch 
@@ -127,7 +127,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('2',{
 		inherit : 'basicSelect',
 		name : 'genre',
-		decline : false,
 		stem : 'Quel est votre sexe à l\'état-civil ?',
 		answers : [
 			{text : 'Homme', value:1},
@@ -138,7 +137,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('3',{
 	    inherit : 'basicDropdown',
 	    name: 'nationalité',
-		decline : false, 
 	    stem: 'Quelle est votre nationalité ?',
 	    answers: [
 	        {text:'Afghanistan', value:1},
@@ -318,7 +316,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('5',{
 		inherit : 'basicSelect',
 		name : 'lieu_naissance',
-		decline: false, 
 		stem : 'Où êtes-vous né(e) ?',
 		answers : [
 			{text : 'En France', value:1},
@@ -329,7 +326,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('6',{
 		inherit : 'basicDropdown',
 		name : 'annee_france_1',
-		decline : false, 
 		stem : 'A quel âge vous êtes-vous installés en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
 		answers : [
 			{text : '0', value:0},
@@ -370,7 +366,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('7',{
 		inherit : 'basicSelect', 
 		name: 'annee_france_2',
-		decline: false, 
 		stem : 'A quel âge vous êtes-vous installés en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
 		answers : [
 			{text : 'Avant 5 ans', value:1},
@@ -384,7 +379,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('8',{
 		inherit : 'basicSelect',
 		name : 'langue_fr',
-		decline : false, 
 		stem : 'Parliez-vous français au sein de votre famille durant votre enfance ?',
 		answers : [
 			{text : 'Oui', value:1},
@@ -395,7 +389,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('9',{
 		inherit : 'basicSelect',
 		name : 'diplome_pere',
-		decline : false, 
 		stem : 'Quel est le plus haut diplôme détenu par votre père ?',
 		answers : [
 			{text : 'Aucun diplôme', value:1},
@@ -411,7 +404,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('10',{
 		inherit : 'basicSelect',
 		name : 'diplome_mere',
-		decline : false, 
 		stem : 'Quel est le plus haut diplôme détenu par votre mère ?',
 		answers : [
 			{text : 'Aucun diplôme', value:1},
@@ -427,7 +419,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('11',{
 		inherit : 'basicSelect',
 		name : 'travail_pere',
-		decline : false, 
 		stem : 'Quelle est la situation actuelle ou la dernière situation de votre père ?',
 		answers : [
 			{text : 'Salarié', value:1},
@@ -442,7 +433,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('12',{
 		inherit : 'basicSelect',
 		name : 'travail_mere',
-		decline : false, 
 		stem : 'Quelle est la situation actuelle ou la dernière situation de votre mère ?',
 		answers : [
 			{text : 'Salariée', value:1},
@@ -459,7 +449,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('13',{
 		inherit : 'basicSelect',
 		name : 'bac',
-		decline : false, 
 		stem : 'Quel baccalauréat avez-vous passé ?',
 		answers : [
 			{text : 'Général', value:1},
@@ -471,7 +460,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('14', {
 		inherit : 'basicSelect', 
 		name : 'bac_fr',
-		decline : false, 
 		stem : 'S\'agit-il d\'un baccalauréat d\'un établissement français (y compris à l\'étranger)',
 		answers :[
 			{text : 'Oui', value:1},
@@ -482,7 +470,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('15', {
 		inherit : 'basicText',
 		name : 'bac_annee',
-		decline : false, 
 		stem : 'En quelle année avez-vous passé le baccalauréat ?',
 		validator: 'number'
 	});
@@ -490,7 +477,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('16',{
 		inherit : 'basicSelect',
 		name : 'bac_filiere',
-		decline: false, 
 		stem : 'Quelle était la série de votre baccalauréat général ?',
 		answers : [
 			{text : 'Série S (Scientifique)', value:1},
@@ -503,7 +489,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('17',{
 		inherit : 'basicMulti',
 		name : 'bac_specialité_term',
-		decline : false, 
 		stem : 'Avez-vous suivi les enseignements suivants en terminale ? <i>Plusieurs réponses possibles</i>',
 		answers : [
 			{text : 'Enseignement de spécialité Mathématiques', value:1},
@@ -517,7 +502,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('18',{
 		inherit : 'basicSelect', 
 		name : 'math_premiere', 
-		decline : false, 
 		stem : 'Avez-vous suivi l\'enseignement de spécialité de Mathématiques en Première ?',
 		answers : [
 			{text : 'Oui', value:1},
@@ -528,7 +512,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('19',{
 		inherit : 'basicSelect', 
 		name : 'bac_mention',
-		decline : false, 
 		stem : 'Quelle mention avez-vous eu au baccalauréat ?',
 		answers : [
 			{text : 'Mention passable / Aucune mention (moyenne entre 10 et 12)', value:1},
@@ -542,7 +525,6 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('20',{
 		inherit : 'basicMulti',
 		name : 'environnement', 
-		decline : false, 
 		stem : 'Veuillez cocher les phrases qui correspondent à votre situation', 
 		answers : [
 			{text : 'Je dispose d\'un ordinateur portable.', value:1},
