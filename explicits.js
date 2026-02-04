@@ -314,7 +314,18 @@ define(['questAPI'], function(Quest){
 			number : 'Veuillez entrer un nombre valide'
 		}
 	});
-
+API.addQuestionsSet('1',{
+		inherit : 'basicSelect',
+		name : 'licence',
+		decline : false,
+		stem : 'Vous êtes actuellement en :', 
+		answers : [
+			{text : 'L1', value: 1},
+			{text : 'L2', value : 2},
+			{text : 'L3 Economie', value : 3},
+			{text : 'L3 Gestion des entreprises', value: 4}
+			]
+	});
 	API.addQuestionsSet('5',{
 		inherit : 'basicSelect',
 		name : 'lieu_naissance',
@@ -399,11 +410,11 @@ define(['questAPI'], function(Quest){
 		stem : 'Quel est le plus haut diplôme détenu par votre père ?',
 		answers : [
 			{text : 'Aucun diplôme', value : 1},
-			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de niveau équivalent)',value: 2},
-			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de niveau équivalent',value:3},
-			{text : 'Diplôme de niveau BAC+2 (DEUG,BTS ou équivalent)', value: 4},
-			{text : 'Diplôme de niveau BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
-			{text : 'Diplôme de niveau BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
+			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de licence équivalent)',value: 2},
+			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de licence équivalent',value:3},
+			{text : 'Diplôme de licence BAC+2 (DEUG,BTS ou équivalent)', value: 4},
+			{text : 'Diplôme de licence BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
+			{text : 'Diplôme de licence BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
 			{text : 'Ne sait pas', value: 8}
 			]
 	});
@@ -415,11 +426,11 @@ define(['questAPI'], function(Quest){
 		stem : 'Quel est le plus haut diplôme détenu par votre mère ?',
 		answers : [
 			{text : 'Aucun diplôme', value : 1},
-			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de niveau équivalent)',value: 2},
-			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de niveau équivalent',value:3},
-			{text : 'Diplôme de niveau BAC+2 (DEUG,BTS ou équivalent)', value: 4},
-			{text : 'Diplôme de niveau BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
-			{text : 'Diplôme de niveau BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
+			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de licence équivalent)',value: 2},
+			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de licence équivalent',value:3},
+			{text : 'Diplôme de licence BAC+2 (DEUG,BTS ou équivalent)', value: 4},
+			{text : 'Diplôme de licence BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
+			{text : 'Diplôme de licence BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value : 6},
 			{text : 'Ne sait pas', value: 8}
 			]
 	});
@@ -1868,7 +1879,7 @@ define(['questAPI'], function(Quest){
 	        inherit: 'basicQ',
 	        type: 'text',
 	        name: 'debug',
-	        stem: 'DEBUG : Valeur enregistrée pour Q1 = <%= current.questions.niveau %>'}},
+	        stem: 'DEBUG : Valeur enregistrée pour Q1 = <%= current.questions.licence %>'}},
 
 		
 		{inherit:'basicPage',questions:{inherit:'2'}},
@@ -1915,10 +1926,10 @@ define(['questAPI'], function(Quest){
 		{inherit: 'basicPage',questions:{inherit:'20'}},
 		{inherit: 'basicPage',questions:{inherit:'21'}},
 		{inherit: 'basicPage',
-		 condition:'<%= current.questions.niveau == 1 %>',
+		 condition:'<%= current.questions.licence == 1 %>',
 		 questions: {inherit:'22'}},
 		{inherit: 'basicPage',
-		 condition:'<%= current.questions.niveau != 2 %>',
+		 condition:'<%= current.questions.licence != 2 %>',
 		 questions: {inherit:'23'}},
 		
 		{inherit: 'basicPage',questions:{inherit:'24'}},
@@ -1926,7 +1937,7 @@ define(['questAPI'], function(Quest){
 		//L1
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1anglais1_1'},
 			 {inherit:'l1anglais1_2'},
@@ -1936,7 +1947,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1renfo_maths1'},
 			 {inherit:'l1renfo_maths2'},
@@ -1946,7 +1957,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1maths1_1'},
 			 {inherit:'l1maths1_2'},
@@ -1956,7 +1967,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1stats1_1'},
 			 {inherit:'l1stats1_2'},
@@ -1966,7 +1977,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1intro_eco1'},
 			 {inherit:'l1intro_eco2'},
@@ -1976,7 +1987,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1intro_gest1'},
 			 {inherit:'l1intro_gest2'},
@@ -1986,7 +1997,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1micro1_1'},
 			 {inherit:'l1micro1_2'},
@@ -1996,7 +2007,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1macro1_1'},
 			 {inherit:'l1macro1_2'},
@@ -2006,7 +2017,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1enjeux_manag1'},
 			 {inherit:'l1enjeux_manag2'},
@@ -2016,7 +2027,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1compta1_1'},
 			 {inherit:'l1compta1_2'},
@@ -2026,7 +2037,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1anglais2_1'},
 			 {inherit:'l1anglais2_2'},
@@ -2036,7 +2047,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1maths2_1'},
 			 {inherit:'l1maths2_2'},
@@ -2046,7 +2057,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 1 %>',
+		 condition: '<%= current.questions.licence == 1 %>',
 		 questions:[
 			 {inherit:'l1stats2_1'},
 			 {inherit:'l1stats2_2'},
@@ -2058,7 +2069,7 @@ define(['questAPI'], function(Quest){
 		//L2
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2micro2_1'},
 			 {inherit:'l2micro2_2'},
@@ -2068,7 +2079,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2macro2_1'},
 			 {inherit:'l2macro2_2'},
@@ -2078,7 +2089,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2compta2_1'},
 			 {inherit:'l2compta2_2'},
@@ -2088,7 +2099,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2intro_rh1'},
 			 {inherit:'l2intro_rh2'},
@@ -2098,7 +2109,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2etudes_mark1'},
 			 {inherit:'l2etudes_mark2'},
@@ -2108,7 +2119,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2maths3_1'},
 			 {inherit:'l2maths3_2'},
@@ -2118,7 +2129,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2proba1_1'},
 			 {inherit:'l2proba1_2'},
@@ -2128,7 +2139,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2anglais3_1'},
 			 {inherit:'l2anglais3_2'},
@@ -2138,7 +2149,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2macro3_1'},
 			 {inherit:'l2macro3_2'},
@@ -2148,7 +2159,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2pol_eco_soc1'},
 			 {inherit:'l2pol_eco_soc2'},
@@ -2158,7 +2169,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2mon_fi1'},
 			 {inherit:'l2mon_fi2'},
@@ -2168,7 +2179,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2analyse_fi1'},
 			 {inherit:'l2analyse_fi2'},
@@ -2178,7 +2189,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2gest_prod1'},
 			 {inherit:'l2gest_prod2'},
@@ -2188,7 +2199,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2analyse_don1'},
 			 {inherit:'l2analyse_don2'},
@@ -2198,7 +2209,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 2 %>',
+		 condition: '<%= current.questions.licence == 2 %>',
 		 questions:[
 			 {inherit:'l2anglais4_1'},
 			 {inherit:'l2anglais4_2'},
@@ -2210,7 +2221,7 @@ define(['questAPI'], function(Quest){
 		//L3 eco
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3croissance1'},
 			 {inherit:'l3croissance2'},
@@ -2220,7 +2231,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3eco_pub1'},
 			 {inherit:'l3eco_pub2'},
@@ -2230,7 +2241,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3eco_inter1'},
 			 {inherit:'l3eco_inter2'},
@@ -2240,7 +2251,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3eco_trav1'},
 			 {inherit:'l3eco_trav2'},
@@ -2250,7 +2261,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3econometrie1'},
 			 {inherit:'l3econometrie2'},
@@ -2260,7 +2271,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3app_r1_1'},
 			 {inherit:'l3app_r1_2'},
@@ -2270,7 +2281,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3anglais5e_1'},
 			 {inherit:'l3anglais5e_2'},
@@ -2280,7 +2291,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3app_r2_1'},
 			 {inherit:'l3app_r2_2'},
@@ -2290,7 +2301,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3excel1'},
 			 {inherit:'l3excel2'},
@@ -2300,7 +2311,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 3 %>',
+		 condition: '<%= current.questions.licence == 3 %>',
 		 questions:[
 			 {inherit:'l3anglais6e_1'},
 			 {inherit:'l3anglais6e_2'},
@@ -2312,7 +2323,7 @@ define(['questAPI'], function(Quest){
 		//L3 gestion 
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3hpm1'},
 			 {inherit:'l3hpm2'},
@@ -2322,7 +2333,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3controle_ges1'},
 			 {inherit:'l3controle_ges2'},
@@ -2332,7 +2343,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3etude_march1'},
 			 {inherit:'l3etude_march2'},
@@ -2342,7 +2353,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3rh1'},
 			 {inherit:'l3rh2'},
@@ -2352,7 +2363,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3commerce1'},
 			 {inherit:'l3commerce2'},
@@ -2362,7 +2373,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3init_mark1'},
 			 {inherit:'l3init_mark2'},
@@ -2372,7 +2383,7 @@ define(['questAPI'], function(Quest){
 		},
 		
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3stats3_1'},
 			 {inherit:'l3stats3_2'},
@@ -2382,7 +2393,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3anglais5g_1'},
 			 {inherit:'l3anglais5g_2'},
@@ -2392,7 +2403,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3diag_org1'},
 			 {inherit:'l3diag_org2'},
@@ -2402,7 +2413,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3fi_entreprise1'},
 			 {inherit:'l3fi_entreprise2'},
@@ -2412,7 +2423,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3etude1'},
 			 {inherit:'l3etude2'},
@@ -2422,7 +2433,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3anglais6g_1'},
 			 {inherit:'l3anglais6g_2'},
@@ -2432,7 +2443,7 @@ define(['questAPI'], function(Quest){
 		},
 
 		{inherit: 'basicPage', 
-		 condition: '<%= current.questions.niveau == 4 %>',
+		 condition: '<%= current.questions.licence == 4 %>',
 		 questions:[
 			 {inherit:'l3com1'},
 			 {inherit:'l3com2'},
