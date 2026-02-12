@@ -1489,55 +1489,54 @@ define(['questAPI'], function(Quest){
 			stem: 'Nous allons maintenant vous poser des questions sur votre parcours scolaire, à commencer par votre baccalauréat.'
 			}
 		},
-		{inherit:'basicPage', progressBar: '1/9', questions:{inherit:'13'}},
+		{inherit:'basicPage', progressBar: '1/6', questions:{inherit:'13'}},
 		
 		{mixer: 'branch',
 			conditions: [
 				{compare: 'current.questions.bac.response', to: 1}
 			],
 			data: [
-				{inherit: 'basicPage', progressBar: '2/9', questions: {inherit: '14'}},
+				{inherit: 'basicPage', progressBar: '2/6', questions: {inherit: '14'}},
 				{mixer: 'branch',
 					conditions: [
 						{compare: 'current.questions.bac_fr.response', to: 1}
 					],
 					data: [
-						{inherit: 'basicPage', progressBar: '3/9', questions: {inherit: '15'}},
+						{inherit: 'basicPage', progressBar: '3/6', questions: {inherit: '15'}},
 						{mixer: 'branch', 
 							conditions: [
 								{compare: 'current.questions.bac_annee.response', to: 2021, operator: 'lesserThan'}
 							],
 							data: [
-								{inherit: 'basicPage', progressBar: '4/9', questions: {inherit: '16'}},
+								{inherit: 'basicPage', progressBar: '4/6', questions: {inherit: '16'}},
 							],
 							elseData: [
-								{inherit: 'basicPage', progressBar: '4/9', questions: {inherit: '17'}},
-								{inherit: 'basicPage', progressBar: '5/9', questions: {inherit: '18'}}
+								{inherit: 'basicPage', progressBar: '4/6', questions: {inherit: '17'}},
+								{inherit: 'basicPage', progressBar: '5/6', questions: {inherit: '18'}}
 							]
 						}
 					],
 					elseData: [
-						{inherit: 'basicPage', progressBar: '3/9', questions: {inherit: '16'}}
+						{inherit: 'basicPage', progressBar: '3/6', questions: {inherit: '16'}}
 					]
 				}
 			],
 			elseData: [
-				{inherit: 'basicPage', progressBar: '2/9', questions:{inherit: '14'}}
+				{inherit: 'basicPage', progressBar: '2/6', questions:{inherit: '14'}}
 			]
 		},
 	
-		{inherit:'basicPage', progressBar: '6/9', questions:{inherit:'19'}},
+		{inherit:'basicPage', progressBar: '6/6', questions:{inherit:'19'}},
 		{inherit:'basicPage', questions: 
 			{type: 'info', description: 'Nous allons maintenant vous poser des questions sur votre environnement d’étude actuellement à votre domicile.'}},
-		{inherit: 'basicPage',progressBar: '7/9', questions:{inherit:'20'}},
-		{inherit: 'basicPage', progressBar: '8/9', questions:{inherit:'21'}},
+		{inherit: 'basicPage',progressBar: '1/4', questions:{inherit:'20'}},
+		{inherit: 'basicPage', progressBar: '2/4', questions:{inherit:'21'}},
 		{mixer: 'branch',
 			conditions: [{compare: 'current.questions.licence.response', to:1}],
-			data: [{inherit: 'basicPage', progressBar: '9/9', questions:{inherit:'22'}}],
-			elseData: [{inherit: 'basicPage', progressBar: '9/9', questions:{inherit:'23'}}]
+			data: [{inherit: 'basicPage', progressBar: '3/4', questions:{inherit:'22'}}],
+			elseData: [{inherit: 'basicPage', progressBar: '4/4', questions:{inherit:'23'}}]
 		},
 
-		{inherit: 'basicPage', questions: {inherit: 'licence'}, decline: false},
 	{inherit: 'basicPage', questions: {inherit: '24'}},
 
 	{inherit: 'basicPage', questions: 
