@@ -1528,20 +1528,20 @@ define(['questAPI'], function(Quest){
 	
 		{inherit:'basicPage', progressBar: '6/6', questions:{inherit:'19'}},
 		{inherit:'basicPage', questions: 
-			{type: 'info', description: 'Nous allons maintenant vous poser des questions sur votre environnement d’étude actuellement à votre domicile.'}},
-		{inherit: 'basicPage',progressBar: '1/4', questions:{inherit:'20'}},
-		{inherit: 'basicPage', progressBar: '2/4', questions:{inherit:'21'}},
+			{type: 'info', stem: 'Nous allons maintenant vous poser des questions sur votre environnement d’étude actuellement à votre domicile.'}},
+		{inherit: 'basicPage',progressBar: '1/5', questions:{inherit:'20'}},
+		{inherit: 'basicPage', progressBar: '2/5', questions:{inherit:'21'}},
 		{mixer: 'branch',
 			conditions: [{compare: 'current.questions.licence.response', to:1}],
-			data: [{inherit: 'basicPage', progressBar: '3/4', questions:{inherit:'22'}}],
-			elseData: [{inherit: 'basicPage', progressBar: '4/4', questions:{inherit:'23'}}]
+			data: [{inherit: 'basicPage', progressBar: '3/5', questions:{inherit:'22'}}],
+			elseData: [{inherit: 'basicPage', progressBar: '4/5', questions:{inherit:'23'}}]
 		},
 
-	{inherit: 'basicPage', questions: {inherit: '24'}},
+	{inherit: 'basicPage', progressBar: '5/5', questions: {inherit: '24'}},
 
 	{inherit: 'basicPage', questions: 
 		{type: 'info',
-		description: 'Nous allons maintenant vous poser des questions sur votre année à l\'université et sur chacun des enseignements que vous avez reçu en TD cette année.'
+		stem: 'Nous allons maintenant vous poser des questions sur votre année à l\'université et sur chacun des enseignements que vous avez reçu en TD cette année.'
 		}
 	},
 
