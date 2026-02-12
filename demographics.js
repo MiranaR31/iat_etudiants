@@ -101,7 +101,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('ressenti4',{
 		inherit: 'basicMulti', 
 		decline: false,
-		stem: '<b>4 - D\'après vous, ces traitements différents dans ce TD pouvaient-ils être liés à ces différents éléments ?</b>',
+		stem: '<b>4 - D\'après vous, ces traitements différents dans ce TD pouvaient-ils être liés à ces différents éléments ?</b><br><i>Plusieurs réponses possibles.</i>',
 		answers: [
 			{text: 'Votre sexe (le fait que vous soyez un homme ou une femme)', value:1},
 			{text: 'Votre état de santé ou un handicap', value:2},
