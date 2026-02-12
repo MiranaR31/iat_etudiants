@@ -29,27 +29,38 @@ define(['managerAPI',
             header: 'Welcome'
         }],
 
+        demographics: [{
+            name: 'demographics',
+            type: 'quest', 
+            scriptUrl: 'demographics.js'
+        }],
+
         explicits: [{
             type: 'quest',
             name: 'explicits',
             scriptUrl: 'explicits.js'
         }],
 
+        school: [{
+            name: 'school',
+            type: 'quest', 
+            scriptUrl: 'school.js'
+        }],
 
         lastpage: [{
             type: 'message',
             name: 'lastpage',
             templateUrl: 'lastpage.jst',
-            title: 'End',
+            title: 'Fin du questionnaire',
             //Uncomment the following if you want to end the study here.
             //last:true, 
-            header: 'You have completed the study'
+            header: 'Vous avez terminé le questionnaire !',
         }], 
         
        
 		
 		//This task waits until the data are sent to the server.
-        uploading: uploading_task({header: 'just a moment', body:'Please wait, sending data... '})
+        uploading: uploading_task({header: 'Fin du questionnaire', body:'Veuillez patienter'})
     });
 
     API.addSequence([
@@ -77,14 +88,14 @@ define(['managerAPI',
 
                         '[pi-quest] .btn-toolbar {margin:15px;float:none !important; text-align:center;position:relative;}',
                         '[pi-quest] [ng-click="decline($event)"] {position:absolute;right:0;bottom:0}',
-                        '[pi-quest] [ng-click="soumettre()"] {width:30%;line-height: 1.3333333;border-radius: 6px;}',
+                        '[pi-quest] [ng-click="submit()"] {width:30%;line-height: 1.3333333;border-radius: 6px;}',
                         // larger screens
                         '@media (min-width: 480px) {',
-                        ' [pi-quest] [ng-click="soumettre()"] {width:30%;padding: 10px 16px;font-size: 1.6em;}',
+                        ' [pi-quest] [ng-click="submit()"] {width:30%;padding: 10px 16px;font-size: 1.6em;}',
                         '}',
                         // phones and smaller screens
                         '@media (max-width: 480px) {',
-                        ' [pi-quest] [ng-click="soumettre()"] {padding: 8px 13px;font-size: 1.2em;}',
+                        ' [pi-quest] [ng-click="submit()"] {padding: 8px 13px;font-size: 1.2em;}',
                         ' [pi-quest] [ng-click="decline($event)"] {font-size: 0.9em;padding:3px 6px;}',
                         '}'
                     ]
@@ -93,7 +104,7 @@ define(['managerAPI',
         },
         
         {inherit: 'intro'},
-        {inherit: 'explicits'},
+        {inherit: 'demographics'},
 		{inherit: 'uploading'},
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
