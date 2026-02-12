@@ -94,7 +94,7 @@ define(['questAPI'], function(Quest){
 		inherit: 'basicGrid', 
 		required: true,
 		stem: '<b>3 - Personnellement, pensez-vous avoir été traité différemment des autres étudiants dans cette matière, par exemple dans la façon dont l\'enseignant s\'adressait à vous, interagissait avec vous ou répondait à vos questions ?</b> <br><i>Si vous n\'avez pas suivi cette matière ou ce TD, cochez "Non concerné".</i>', name:'ressenti3',
-		rows: [{left: 'Moins bien traité', right: 'Mieux traité traité'}]
+		rows: [{left: 'Moins bien traité', right: 'Mieux traité'}]
 		}
 	);
 
@@ -452,9 +452,9 @@ define(['questAPI'], function(Quest){
 		stem : 'Quel est le plus haut diplôme détenu par votre mère ?',
 		answers : [
 			{text : 'Aucun diplôme', value:1},
-			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de licence équivalent)',value:2},
-			{text : 'Baccalauréat général, technologique ou professionnel ou diplôme étranger de licence équivalent',value:3},
-			{text : 'Diplôme de licence BAC+2 (DEUG,BTS ou équivalent)', value:4},
+			{text : 'Diplôme inférieur au Baccalauréat (brevet des collèges, BEPC, CAP, BEP ou diplôme étranger de même niveau)',value:2},
+			{text : 'Baccalauréat général, technologique ou professionnel (ou diplôme étranger de même niveau)',value:3},
+			{text : 'Diplôme de licence BAC+2 (DEUG, BTS ou équivalent)', value:4},
 			{text : 'Diplôme de licence BAC+3 ou 4 (Licence, Maîtrise, Master 1 ou équivalent)', value:5},
 			{text : 'Diplôme de licence BAC+5 et plus (DEA, DESS, Master 2, Diplôme d\'une grande école, Doctorat', value:6},
 			{text : 'Ne sait pas', value:8}
@@ -482,7 +482,7 @@ define(['questAPI'], function(Quest){
 		answers : [
 			{text : 'Salariée', value:1},
 			{text : 'A son compte ou indépendant', value:2},
-			{text : 'Au chômage (inscrit ou non à France Travail)', value:3},
+			{text : 'Au chômage (inscrite ou non à France Travail)', value:3},
 			{text : 'Femme au foyer', value:4},
 			{text : 'Retraitée ou retirée des affaires ou en préretraite', value:5},
 			{text : 'Autre', value:8}
@@ -497,15 +497,15 @@ define(['questAPI'], function(Quest){
 		stem : 'Quel baccalauréat avez-vous passé ?',
 		answers : [
 			{text : 'Général', value:1},
-			{text : 'Professionnel', value:2},
-			{text : 'Technologique', value:3}
+			{text : 'Technologique', value:2},
+			{text : 'Professionnel', value:3}
 			]
 	});
 
 	API.addQuestionsSet('14', {
 		inherit : 'basicSelect', 
 		name : 'bac_fr',
-		stem : 'S\'agit-il d\'un baccalauréat d\'un établissement français (y compris à l\'étranger)',
+		stem : 'S\'agit-il d\'un baccalauréat d\'un établissement français (y compris à l\'étranger) ?',
 		answers :[
 			{text : 'Oui', value:1},
 			{text : 'Non', value:2}
@@ -534,9 +534,9 @@ define(['questAPI'], function(Quest){
 		name : 'bac_filiere',
 		stem : 'Quelle était la série de votre baccalauréat général ?',
 		answers : [
-			{text : 'Série S (Scientifique)', value:1},
-			{text : 'Série ES (Economique et Sociale)', value:2},
-			{text : 'Série L (Littéraire)', value:3},
+			{text : 'Série S (Scientifique ou équivalent)', value:1},
+			{text : 'Série ES (Economique et Sociale ou équivalent)', value:2},
+			{text : 'Série L (Littéraire ou équivalent)', value:3},
 			{text : 'Autre', value:4}
 			]
 	});
@@ -629,7 +629,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('24',{
 		inherit : 'basicSelect', 
 		name : 'stereotypes', 
-		stem : 'Au-delà de votre expéricence personnelle, pensez-vous appartenir à un groupe envers lequel certains enseignants ont des stéréotypes / envers lequel des enseignants peuvent avoir des stéréotypes ?',
+		stem : 'Au-delà de votre expéricence personnelle, pensez-vous appartenir à un groupe envers lequel certains enseignants ont des stéréotypes ?',
 		answers : [
 			{text : 'Oui', value:1}, 
 			{text : 'Non', value:2},
@@ -1522,7 +1522,8 @@ define(['questAPI'], function(Quest){
 				}
 			],
 			elseData: [
-				{inherit: 'basicPage', progressBar: '2/6', questions:{inherit: '14'}}
+				{inherit: 'basicPage', progressBar: '2/6', questions:{inherit: '14'}},
+				{inherit: 'basicPage', progressBar: '3/6', questions: {inherit: '15'}}
 			]
 		},
 	
@@ -1541,7 +1542,7 @@ define(['questAPI'], function(Quest){
 
 	{inherit: 'basicPage', questions: 
 		{type: 'info',
-		stem: 'Nous allons maintenant vous poser des questions sur votre année à l\'université et sur chacun des enseignements que vous avez reçu en TD cette année.'
+		stem: 'Nous allons maintenant vous poser des questions sur votre année à l\'université et sur chacun des enseignements que vous avez reçus en TD cette année.'
 		}
 	},
 
