@@ -1527,8 +1527,8 @@ define(['questAPI'], function(Quest){
 		},
 	
 		{inherit:'basicPage', progressBar: '6/9', questions:{inherit:'19'}},
-		{inherit: 'basicPage', questions: 
-			{type: 'info', description: 'Nous allons maintenant vous poser des questions sur votre environnement d’étude actuellement à votre domicile'}},
+		{inherit:'basicPage', questions: 
+			{type: 'info', description: 'Nous allons maintenant vous poser des questions sur votre environnement d’étude actuellement à votre domicile.'}},
 		{inherit: 'basicPage',progressBar: '7/9', questions:{inherit:'20'}},
 		{inherit: 'basicPage', progressBar: '8/9', questions:{inherit:'21'}},
 		{mixer: 'branch',
