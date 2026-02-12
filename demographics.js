@@ -11,7 +11,9 @@ define(['questAPI'], function(Quest){
         decline: false,
         declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
         autoFocus:true, 
-		submitText: 'Suivant'
+		submitText: 'Suivant',
+		prev: true,
+		prevText: isTouch ? 'Précédent' : 'Précédent'
     });
 
 
@@ -27,10 +29,7 @@ define(['questAPI'], function(Quest){
                 : 'Veuillez sélectionner une réponse.'
 		},
         autoSubmit:'false',
-        numericValues:'true',
-        help: true,
-        helpText: 'Astuce : Vous pouvez double-cliquer sur votre réponse pour passer à la question suivante.',
-		helpText: 'Attention, vous ne pourrez pas revenir sur votre réponse.'
+        numericValues:'true'
 	});
 
     API.addQuestionsSet('basicSelect',{ //Sélection unique 
@@ -134,6 +133,8 @@ define(['questAPI'], function(Quest){
         inherit: 'basicText',
         type : 'textNumber',
         name: 'student_ID',
+		minlength: 6,
+		maxlength: 8,
         stem: 'Votre numéro étudiant',
     })
 
