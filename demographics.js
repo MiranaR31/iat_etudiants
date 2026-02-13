@@ -13,7 +13,9 @@ define(['questAPI'], function(Quest){
         autoFocus:true, 
 		submitText: 'Suivant',
 		prev: true,
-		prevText: isTouch ? 'Précédent' : 'Précédent'
+		prevText: isTouch ? 'Précédent' : 'Précédent',
+		decline: true, 
+		declineText: isTouch ? 'Refuser' : 'Refuser de répondre',
     });
 
 
