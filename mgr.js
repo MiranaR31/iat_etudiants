@@ -29,7 +29,7 @@ define(['managerAPI',
             header: 'Welcome'
         }],
 
-        quesions: [{
+        questions: [{
             name: 'questions',
             type: 'quest', 
             scriptUrl: 'questions.js'
@@ -104,7 +104,7 @@ define(['managerAPI',
         },
         
         {inherit: 'intro'},
-        {inherit: 'demographics'},
+        {inherit: 'questions'},
 		{inherit: 'uploading'},
         {inherit: 'lastpage'},
         {inherit: 'redirect'}
