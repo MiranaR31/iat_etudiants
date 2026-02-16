@@ -9,11 +9,11 @@ define(['questAPI'], function(Quest){
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Questionnaire',
         decline: true,
-        declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
+        declineText: 'Refuser de répondre', 
         autoFocus:true, 
 		submitText: 'Suivant',
 		prev: true,
-		prevText: isTouch ? 'Précédent' : 'Précédent'
+		prevText: 'Précédent'
     });
 
 
