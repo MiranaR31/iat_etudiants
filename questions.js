@@ -8,8 +8,6 @@ define(['questAPI'], function(Quest){
     API.addPagesSet('basicPage',{
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Questionnaire',
-        decline: true,
-        declineText: 'Refuser de répondre', 
         autoFocus:true, 
 		submitText: 'Suivant',
 		prev: true,
