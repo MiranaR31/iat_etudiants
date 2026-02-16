@@ -29,10 +29,10 @@ define(['managerAPI',
             header: 'Welcome'
         }],
 
-        demographics: [{
-            name: 'demographics',
+        quesions: [{
+            name: 'questions',
             type: 'quest', 
-            scriptUrl: 'demographics.js'
+            scriptUrl: 'questions.js'
         }],
 
         explicits: [{
@@ -60,7 +60,7 @@ define(['managerAPI',
        
 		
 		//This task waits until the data are sent to the server.
-        uploading: uploading_task({header: 'Fin du questionnaire', body:'Veuillez patienter'})
+        uploading: uploading_task({header: 'Fin du questionnaire', body:'Veuillez patienter le temps que nous récupérions vos réponses.'})
     });
 
     API.addSequence([
