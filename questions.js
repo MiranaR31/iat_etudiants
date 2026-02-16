@@ -8,14 +8,12 @@ define(['questAPI'], function(Quest){
     API.addPagesSet('basicPage',{
         noSubmit:false, //Change to true if you don't want to show the submit button.
         header: 'Questionnaire',
-        decline: false,
+        decline: true,
         declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
         autoFocus:true, 
 		submitText: 'Suivant',
 		prev: true,
-		prevText: isTouch ? 'Précédent' : 'Précédent',
-		decline: true, 
-		declineText: isTouch ? 'Refuser' : 'Refuser de répondre',
+		prevText: isTouch ? 'Précédent' : 'Précédent'
     });
 
 
@@ -137,7 +135,7 @@ define(['questAPI'], function(Quest){
         name: 'student_ID',
 		minlength: 6,
 		maxlength: 8,
-        stem: 'Votre numéro étudiant',
+        stem: 'Votre numéro étudiant'
     })
 
     API.addQuestionsSet('1',{
