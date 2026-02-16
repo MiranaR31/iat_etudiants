@@ -13,7 +13,7 @@ define(['questAPI'], function(Quest){
         autoFocus:true, 
 		submitText: 'Suivant',
 		prev: true,
-		prevText: 'Précédent'
+		prevText: isTouch ? 'Précédent' : 'Précédent'
     });
 
 
