@@ -5,16 +5,16 @@ define(['questAPI'], function(Quest){
     /**
 	* Page prototype
 	*/
-    API.addPagesSet('basicPage',{
-        noSubmit:false, //Change to true if you don't want to show the submit button.
-        header: 'Questionnaire',
-        decline: true,
-        declineText: 'Refuser de répondre', 
-        autoFocus:true, 
+	API.addPagesSet('basicPage',{
+		noSubmit:false, //Change to true if you don't want to show the submit button.
+		header: 'Questionnaire',
+		autoFocus:true, 
 		submitText: 'Suivant',
+		decline: true,
+		declineText: 'Ne pas répondre',
 		prev: true,
 		prevText: 'Précédent'
-    });
+	});
 
 
     /**

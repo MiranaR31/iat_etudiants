@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/minnojs/minno-quest@0.3/dist/main.css" />
-		<style type="text/css">
+
+        <style type="text/css">
         .container {padding-top: 15px;}
+        
+        /* Ajoutez ceci : */
+        .default-skin [piq-page] .page-buttons .page-prev,
+        .demo-skin [piq-page] .page-buttons .page-prev {
+            right: auto ;
+            left: 15px ;
+        }
+        
 		</style>
 	
         <script>
@@ -36,6 +46,7 @@
                 minnoJS.onEnd = function () { setTimeout(proceed, 100); }
             }
         </script>
+        
         
     </head>
     <body>

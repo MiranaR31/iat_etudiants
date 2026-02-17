@@ -85,9 +85,8 @@ define(['managerAPI',
                         '[pi-quest]::after {clear: both;}',
                         '[pi-quest] h3 { border-bottom: 1px solid transparent; border-top-left-radius: 3px; border-top-right-radius: 3px; padding: 10px 15px; color: inherit; font-size: 2em; margin-bottom: 20px; margin-top: 0;background-color: #d9edf7;border-color: #bce8f1;color: #31708f;}',
                         '[pi-quest] .form-group > label {font-size:1.2em; font-weight:normal;}',
-
-                        '[pi-quest] .btn-toolbar {margin:15px;float:none !important; text-align:center;position:relative;}',
-                        '[pi-quest] [ng-click="decline($event)"] {position:absolute;right:0;bottom:0}',
+                        '[pi-quest] .btn-toolbar {margin:15px;float:none !important; text-align:center;position:relative;height: 40px}',
+                        '[pi-quest] [ng-click="decline($event)"] {position:absolute;right:0px;bottom:0}',
                         '[pi-quest] [ng-click="submit()"] {width:30%;line-height: 1.3333333;border-radius: 6px;}',
                         // larger screens
                         '@media (min-width: 480px) {',
@@ -97,6 +96,7 @@ define(['managerAPI',
                         '@media (max-width: 480px) {',
                         ' [pi-quest] [ng-click="submit()"] {padding: 8px 13px;font-size: 1.2em;}',
                         ' [pi-quest] [ng-click="decline($event)"] {font-size: 0.9em;padding:3px 6px;}',
+                        ' [pi-quest] [ng-click="prev($event)"] {padding: 3px 6px;font-size: 0.9em;}',
                         '}'
                     ]
                 }
