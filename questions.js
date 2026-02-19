@@ -131,10 +131,13 @@ define(['questAPI'], function(Quest){
 
     API.addQuestionsSet('intro3',{
         inherit: 'basicText',
-        type : 'textNumber',
         name: 'student_ID',
+		required: false,
 		minlength: 6,
 		maxlength: 8,
+		errorMsg: {
+			minlength: 'Votre numéro étudiant doit comporter au moins 6 caractères.',
+			maxlength: 'Votre numéro étudiant doit comporter au maximum 8 caractères.'},
         stem: 'Votre numéro étudiant'
     })
 
@@ -146,7 +149,8 @@ define(['questAPI'], function(Quest){
 		answers : [
 			{text : 'L1', value:1},
 			{text : 'L2', value:2},
-			{text : 'L3', value:3}
+			{text : 'L3', value:3},
+			{text : 'M1', value:4}
 			]
 	});
 	
@@ -1439,17 +1443,311 @@ define(['questAPI'], function(Quest){
 		name: 'l3stats4'
 	});
 
+	//M1 pilote 
+
+	API.addQuestionsSet('m1stats1',{
+		inherit: 'ressenti1',
+		name: 'm1stats1',
+		header: 'Statistiques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1stats2',{
+		inherit: 'ressenti2',
+		name: 'm1stats2',
+		header: 'Statistiques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1stats3',{
+		inherit: 'ressenti3',
+		name: 'm1stats3',
+		header: 'Statistiques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1stats4',{
+		inherit: 'ressenti4',
+		name: 'm1stats4',
+		header: 'Statistiques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1stata1',{
+		inherit: 'ressenti1',
+		name: 'm1stata',
+		header: 'Gestion des données sous STATA (S1)'
+	});
+
+	API.addQuestionsSet('m1stata2',{
+		inherit: 'ressenti2',
+		name: 'm1stata2',
+		header: 'Gestion des données sous STATA (S1)'
+	});
+
+	API.addQuestionsSet('m1stata3',{
+		inherit: 'ressenti3',
+		name: 'm1stata3',
+		header: 'Gestion des données sous STATA (S1)'
+	});
+
+	API.addQuestionsSet('m1stata4',{
+		inherit: 'ressenti4',
+		name: 'm1stata4',
+		header: 'Gestion des données sous STATA (S1)'
+	});
+
+	API.addQuestionsSet('m1econometrie1',{
+		inherit: 'ressenti1',
+		name: 'm1econometrie1',
+		header: 'Econométrie générale linéaire (S1)'
+	});
+
+	API.addQuestionsSet('m1econometrie2',{
+		inherit: 'ressenti2',
+		name: 'm1econometrie2',
+		header: 'Econométrie générale linéaire (S1)'
+	});
+
+	API.addQuestionsSet('m1econometrie3',{
+		inherit: 'ressenti3',
+		name: 'm1econometrie3',
+		header: 'Econométrie générale linéaire (S1)'
+	});
+
+	API.addQuestionsSet('m1econometrie4',{
+		inherit: 'ressenti4',
+		name: 'm1econometrie4',
+		header: 'Econométrie générale linéaire (S1)'
+	});
+
+	API.addQuestionsSet('m1managementSI1',{
+		inherit: 'ressenti1',
+		name: 'm1managementSI1',
+		header: 'Management des systèmes d\'information (S1)'
+	});
+
+	API.addQuestionsSet('m1managementSI2',{
+		inherit: 'ressenti2',
+		name: 'm1managementSI2',
+		header: 'Management des systèmes d\'information (S1)'
+	});
+
+	API.addQuestionsSet('m1managementSI3',{
+		inherit: 'ressenti3',
+		name: 'm1managementSI3',
+		header: 'Management des systèmes d\'information (S1)'
+	});
+
+	API.addQuestionsSet('m1managementSI4',{
+		inherit: 'ressenti4',
+		name: 'm1managementSI4',
+		header: 'Management des systèmes d\'information (S1)'
+	});
+
+	API.addQuestionsSet('m1managementstrat1',{
+		inherit: 'ressenti1',
+		name: 'm1managementstrat1',
+		header: 'Management stratégique (S1)'
+	});
+
+	API.addQuestionsSet('m1managementstrat2',{
+		inherit: 'ressenti2',
+		name: 'm1managementstrat2',
+		header: 'Management stratégique (S1)'
+	});
+
+	API.addQuestionsSet('m1managementstrat3',{
+		inherit: 'ressenti3',
+		name: 'm1managementstrat3',
+		header: 'Management stratégique (S1)'
+	});
+
+	API.addQuestionsSet('m1managementstrat4',{
+		inherit: 'ressenti4',
+		name: 'm1managementstrat4',
+		header: 'Management stratégique (S1)'
+	});
+
+	API.addQuestionsSet('m1csr1',{
+		inherit: 'ressenti1',
+		name: 'm1csr1',
+		header: 'Corporate Social Responsibility (S1)'
+	});
+
+	API.addQuestionsSet('m1csr2',{
+		inherit: 'ressenti2',
+		name: 'm1csr2',
+		header: 'Corporate Social Responsibility (S1)'
+	});
+
+	API.addQuestionsSet('m1csr3',{
+		inherit: 'ressenti3',
+		name: 'm1csr3',
+		header: 'Corporate Social Responsibility (S1)'
+	});
+
+	API.addQuestionsSet('m1csr4',{
+		inherit: 'ressenti4',
+		name: 'm1csr4',
+		header: 'Corporate Social Responsibility (S1)'
+	});
+
+	API.addQuestionsSet('m1projetenquete1',{
+		inherit: 'ressenti1',
+		name: 'm1projetenquete1',
+		header: 'Projet de techniques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1projetenquete2',{
+		inherit: 'ressenti2',
+		name: 'm1projetenquete2',
+		header: 'Projet de techniques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1projetenquete3',{
+		inherit: 'ressenti3',
+		name: 'm1projetenquete3',
+		header: 'Projet de techniques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1projetenquete4',{
+		inherit: 'ressenti4',
+		name: 'm1projetenquete4',
+		header: 'Projet de techniques d\'enquête (S1)'
+	});
+
+	API.addQuestionsSet('m1traitementR1',{
+		inherit: 'ressenti1',
+		name: 'm1traitementR1',
+		header: 'Traitement de données sous R (S1)'
+	});
+
+	API.addQuestionsSet('m1traitementR2',{
+		inherit: 'ressenti2',
+		name: 'm1traitementR2',
+		header: 'Traitement de données sous R (S1)'
+	});
+
+	API.addQuestionsSet('m1traitementR3',{
+		inherit: 'ressenti3',
+		name: 'm1traitementR3',
+		header: 'Traitement de données sous R (S1)'
+	});
+
+	API.addQuestionsSet('m1traitementR4',{
+		inherit: 'ressenti4',
+		name: 'm1traitementR4',
+		header: 'Traitement de données sous R (S1)'
+	});
+
+	API.addQuestionsSet('m1TER1',{
+		inherit: 'ressenti1',
+		name: 'm1TER1',
+		header: 'TER (S1)'
+	});
+
+	API.addQuestionsSet('m1TER2',{
+		inherit: 'ressenti2',
+		name: 'm1TER2',
+		header: 'TER (S1)'
+	});
+
+	API.addQuestionsSet('m1TER3',{
+		inherit: 'ressenti3',
+		name: 'm1TER3',
+		header: 'TER (S1)'
+	});
+
+	API.addQuestionsSet('m1TER4',{
+		inherit: 'ressenti4',
+		name: 'm1TER4',
+		header: 'TER (S1)'
+	});
+
+	API.addQuestionsSet('m1anglais1',{
+		inherit: 'ressenti1',
+		name: 'm1anglais1',
+		header: 'Business English (S1)'
+	});
+
+	API.addQuestionsSet('m1anglais2',{
+		inherit: 'ressenti2',
+		name: 'm1anglais2',
+		header: 'Business English (S1)'
+	});
+
+	API.addQuestionsSet('m1anglais3',{
+		inherit: 'ressenti3',
+		name: 'm1anglais3',
+		header: 'Business English (S1)'
+	});
+
+	API.addQuestionsSet('m1anglais4',{
+		inherit: 'ressenti4',
+		name: 'm1anglais4',
+		header: 'Business English (S1)'
+	});
+
+	API.addQuestionsSet('m1data1',{
+		inherit: 'ressenti1',
+		name: 'm1data1',
+		header: 'Data visualisation (S1)'
+	});
+
+	API.addQuestionsSet('m1data2',{
+		inherit: 'ressenti2',
+		name: 'm1data2',
+		header: 'Data visualisation (S1)'
+	});
+
+	API.addQuestionsSet('m1data3',{
+		inherit: 'ressenti3',
+		name: 'm1data3',
+		header: 'Data visualisation (S1)'
+	});
+
+	API.addQuestionsSet('m1data4',{
+		inherit: 'ressenti4',
+		name: 'm1data4',
+		header: 'Data visualisation (S1)'
+	});
+
+	API.addQuestionsSet('m1sql1',{
+		inherit: 'ressenti1',
+		name: 'm1sql1',
+		header: 'Initiation SQL (S1)'
+	});
+
+	API.addQuestionsSet('m1sql2',{
+		inherit: 'ressenti2',
+		name: 'm1sql2',
+		header: 'Initiation SQL (S1)'
+	});
+
+	API.addQuestionsSet('m1sql3',{
+		inherit: 'ressenti3',
+		name: 'm1sql3',
+		header: 'Initiation SQL (S1)'
+	});
+
+	API.addQuestionsSet('m1sql4',{
+		inherit: 'ressenti4',
+		name: 'm1sql4',
+		header: 'Initiation SQL (S1)'
+	});
+
+
+
+
+
 
 
     //sequence
     
     API.addSequence([
-        {inherit: 'basicPage', progressBar: '1/13', questions:[
-            {inherit: 'intro1', helpText: false},
-            {inherit: 'intro2', helpText: false},
+        {inherit: 'basicPage', progressBar: '1/13', decline: false, questions:[
+            {inherit: 'intro1', decline: false},
+            {inherit: 'intro2', decline: false},
             {inherit: 'intro3'}]},
         
-        {inherit:'basicPage', progressBar: '2/13', questions:{inherit:'1'}},
+        {inherit:'basicPage', progressBar: '2/13', decline: false, questions:{inherit:'1'}},
 		{inherit:'basicPage', progressBar: '3/13', questions:{inherit:'2'}},
 		{inherit:'basicPage', progressBar: '4/13',questions: [
             {inherit:'3', helpText: false},
@@ -1922,6 +2220,144 @@ define(['questAPI'], function(Quest){
 						{inherit:'l3stats2'},
 						{inherit:'l3stats3'},
 						{inherit:'l3stats4'}
+						]
+					}
+				]
+			},
+			{
+				conditions: [
+					{compare: 'current.questions.licence.response', to:4}
+				],
+				data: [
+					{inherit: 'basicPage', 
+						progressBar: '1/12',
+					header: 'Statistiques d\'enquête (S1)',
+					questions: [
+						{inherit:'m1stats1'},
+						{inherit:'m1stats2'},
+						{inherit:'m1stats3'},
+						{inherit:'m1stats4'}
+						]
+					},
+					
+					{inherit: 'basicPage',
+						progressBar: '2/12',
+					header: 'Gestion des données sous STATA (S1)',
+					questions: [
+						{inherit:'m1stata1'},
+						{inherit:'m1stata2'},
+						{inherit:'m1stata3'},
+						{inherit:'m1stata4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '3/12',
+					header: 'Econométrie générale linéaire (S1)',
+					questions: [
+						{inherit:'m1econometrie1'},
+						{inherit:'m1econometrie2'},
+						{inherit:'m1econometrie3'},
+						{inherit:'m1econometrie4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '4/12',
+					header: 'Management des systèmes d\'information (S1)',
+					questions: [
+						{inherit:'m1managementSI1'},
+						{inherit:'m1managementSI2'},
+						{inherit:'m1managementSI3'},
+						{inherit:'m1managementSI4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '5/12',
+					header: 'Management stratégique (S1)',
+					questions: [
+						{inherit:'m1managementstrat1'},
+						{inherit:'m1managementstrat2'},
+						{inherit:'m1managementstrat3'},
+						{inherit:'m1managementstrat4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '6/12',
+					header: 'Corporate Social Responsibility (S1)',
+					questions: [
+						{inherit:'m1csr1'},
+						{inherit:'m1csr2'},
+						{inherit:'m1csr3'},
+						{inherit:'m1csr4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '7/12',
+					header: 'Projet de techniques d\'enquête (S1)',
+					questions: [
+						{inherit:'m1projetenquete1'},
+						{inherit:'m1projetenquete2'},
+						{inherit:'m1projetenquete3'},
+						{inherit:'m1projetenquete4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '8/12',
+					header: 'Traitement de données sous R (S1)',
+					questions: [
+						{inherit:'m1traitementR1'},
+						{inherit:'m1traitementR2'},
+						{inherit:'m1traitementR3'},
+						{inherit:'m1traitementR4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '9/12',
+					header: 'TER (S1)',
+					questions: [
+						{inherit:'m1TER1'},
+						{inherit:'m1TER2'},
+						{inherit:'m1TER3'},
+						{inherit:'m1TER4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '10/12',
+					header: 'Business English (S1)',
+					questions: [
+						{inherit:'m1anglais1'},
+						{inherit:'m1anglais2'},
+						{inherit:'m1anglais3'},
+						{inherit:'m1anglais4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '11/12',
+					header: 'Data visualisation (S1)',
+					questions: [
+						{inherit:'m1data1'},
+						{inherit:'m1data2'},
+						{inherit:'m1data3'},
+						{inherit:'m1data4'}
+						]
+					},
+
+					{inherit: 'basicPage',
+						progressBar: '12/12',
+					header: 'Initiation SQL (S1)',
+					questions: [
+						{inherit:'m1sql1'},
+						{inherit:'m1sql2'},
+						{inherit:'m1sql3'},
+						{inherit:'m1sql4'}	
 						]
 					}
 				]
