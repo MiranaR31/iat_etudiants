@@ -1816,6 +1816,7 @@ define(['questAPI'], function(Quest){
 						}
 					],
 					elseData: [
+						{inherit: 'basicPage', progressBar: '3/6', questions: {inherit: '15'}},
 						{inherit: 'basicPage', progressBar: '3/6', questions: {inherit: '16'}}
 					]
 				}
