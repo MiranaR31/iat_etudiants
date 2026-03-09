@@ -156,7 +156,7 @@ define(['questAPI'], function(Quest){
 	
 	API.addQuestionsSet('2',{
 		inherit : 'basicSelect',
-		name : 'genre',
+		name : 'student_genre',
 		stem : 'Quel est votre sexe à l\'état-civil ?',
 		answers : [
 			{text : 'Homme', value:1},

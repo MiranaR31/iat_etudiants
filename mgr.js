@@ -87,10 +87,10 @@ define(['managerAPI',
                         '[pi-quest] .form-group > label {font-size:1.2em; font-weight:normal;}',
                         '[pi-quest] .btn-toolbar {margin:15px;float:none !important; text-align:center;position:relative;height: 40px}',
                         '[pi-quest] [ng-click="decline($event)"] {position:absolute;right:0px;bottom:0}',
-                        '[pi-quest] [ng-click="submit()"] {width:30%;line-height: 1.3333333;border-radius: 6px;}',
+                        '[pi-quest] [ng-click="submit()"] {width:20%;line-height: 1.3333333;border-radius: 6px;}',
                         // larger screens
                         '@media (min-width: 480px) {',
-                        ' [pi-quest] [ng-click="submit()"] {width:30%;padding: 10px 16px;font-size: 1.6em;}',
+                        ' [pi-quest] [ng-click="submit()"] {width:30%;padding: 10px 16px;font-size: 1.4em;}',
                         '}',
                         // phones and smaller screens
                         '@media (max-width: 480px) {',
