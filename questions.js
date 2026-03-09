@@ -1326,7 +1326,7 @@ define(['questAPI'], function(Quest){
 
 	API.addQuestionsSet('l3marketing1',{
 		inherit: 'ressenti1',
-		name: 'l3marketing',
+		name: 'l3marketing1',
 		header: 'Marketing durable (S5)'
 	});
 
