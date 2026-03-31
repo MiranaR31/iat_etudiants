@@ -13,7 +13,8 @@ define(['questAPI'], function(Quest){
 		decline: true,
 		declineText: 'Ne pas répondre',
 		prev: true,
-		prevText: 'Précédent'
+		prevText: 'Précédent',
+		required: true
 	});
 
 
