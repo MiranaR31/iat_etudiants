@@ -118,29 +118,12 @@ define(['questAPI'], function(Quest){
 
     //Socio-demo
 
-    API.addQuestionsSet('intro1',{
+    API.addQuestionsSet('0',{
         inherit: 'basicText',
-        name: 'student_nom',
-        stem: '<b>Veuillez indiquer :</b> <br> <br> Votre nom',
+        name: 'id_etudiant',
+        stem: 'Veuillez indiquer votre identifiant',
     })
 
-    API.addQuestionsSet('intro2',{
-        inherit: 'basicText',
-        name: 'student_prenom',
-        stem: 'Votre prénom',
-    })
-
-    API.addQuestionsSet('intro3',{
-        inherit: 'basicText',
-        name: 'student_ID',
-		required: false,
-		minlength: 6,
-		maxlength: 8,
-		errorMsg: {
-			minlength: 'Votre numéro étudiant doit comporter au moins 6 caractères.',
-			maxlength: 'Votre numéro étudiant doit comporter au maximum 8 caractères.'},
-        stem: 'Votre numéro étudiant'
-    })
 
     API.addQuestionsSet('1',{
 		inherit : 'basicSelect',
@@ -1744,9 +1727,7 @@ define(['questAPI'], function(Quest){
     
     API.addSequence([
         {inherit: 'basicPage', progressBar: '1/13', decline: false, questions:[
-            {inherit: 'intro1', decline: false},
-            {inherit: 'intro2', decline: false},
-            {inherit: 'intro3'}]},
+            {inherit: '0', decline: false}]},
         
         {inherit:'basicPage', progressBar: '2/13', decline: false, questions:{inherit:'1'}},
 		{inherit:'basicPage', progressBar: '3/13', questions:{inherit:'2'}},
