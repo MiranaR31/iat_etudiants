@@ -133,8 +133,7 @@ define(['questAPI'], function(Quest){
 		answers : [
 			{text : 'L1', value:1},
 			{text : 'L2', value:2},
-			{text : 'L3', value:3},
-			{text : 'M1', value:4}
+			{text : 'L3', value:3}
 			]
 	});
 	
@@ -356,11 +355,178 @@ define(['questAPI'], function(Quest){
 			{text : 'A l\'étranger', value:2}
 			]
 	});
+
+	API.addQuestionsSet('5bis',{
+		inherit: 'basicDropdown',
+	    name: 'pays_naissance',
+	    stem: 'Dans quel pays êtes-vous né ?',
+	    answers: [
+	        {text:'Afghanistan', value:1},
+	        {text:'Afrique du Sud', value:2},
+	        {text:'Albanie', value:3},
+	        {text:'Algérie', value:4},
+	        {text:'Allemagne', value:5},
+	        {text:'Andorre', value:6},
+	        {text:'Angola', value:7},
+	        {text:'Arabie Saoudite', value:8},
+	        {text:'Argentine', value:9},
+	        {text:'Arménie', value:10},
+	        {text:'Australie', value:11},
+	        {text:'Autriche', value:12},
+	        {text:'Azerbaïdjan', value:13},
+	        {text:'Bahamas', value:14},
+	        {text:'Bahreïn', value:15},
+	        {text:'Bangladesh', value:16},
+	        {text:'Belgique', value:17},
+	        {text:'Bénin', value:18},
+	        {text:'Biélorussie', value:19},
+	        {text:'Bolivie', value:20},
+	        {text:'Bosnie-Herzégovine', value:21},
+	        {text:'Brésil', value:22},
+	        {text:'Bulgarie', value:23},
+	        {text:'Burkina Faso', value:24},
+	        {text:'Burundi', value:25},
+	        {text:'Cambodge', value:26},
+	        {text:'Cameroun', value:27},
+	        {text:'Canada', value:28},
+	        {text:'Cap-Vert', value:29},
+	        {text:'Chili', value:30},
+	        {text:'Chine', value:31},
+	        {text:'Chypre', value:32},
+	        {text:'Colombie', value:33},
+	        {text:'Comores', value:34},
+	        {text:'Congo', value:35},
+	        {text:'Corée du Nord', value:36},
+	        {text:'Corée du Sud', value:37},
+	        {text:'Costa Rica', value:38},
+	        {text:'Côte d\'Ivoire', value:39},
+	        {text:'Croatie', value:40},
+	        {text:'Cuba', value:41},
+	        {text:'Danemark', value:42},
+	        {text:'Djibouti', value:43},
+	        {text:'Égypte', value:44},
+	        {text:'Émirats Arabes Unis', value:45},
+	        {text:'Équateur', value:46},
+	        {text:'Espagne', value:47},
+	        {text:'Estonie', value:48},
+	        {text:'États-Unis', value:49},
+	        {text:'Éthiopie', value:50},
+	        {text:'Finlande', value:51},
+	        {text:'France', value:52},
+	        {text:'Gabon', value:53},
+	        {text:'Gambie', value:54},
+	        {text:'Géorgie', value:55},
+	        {text:'Ghana', value:56},
+	        {text:'Grèce', value:57},
+	        {text:'Guatemala', value:58},
+	        {text:'Guinée', value:59},
+	        {text:'Guinée équatoriale', value:60},
+	        {text:'Guinée-Bissau', value:61},
+	        {text:'Haïti', value:62},
+	        {text:'Honduras', value:63},
+	        {text:'Hongrie', value:64},
+	        {text:'Inde', value:65},
+	        {text:'Indonésie', value:66},
+	        {text:'Irak', value:67},
+	        {text:'Iran', value:68},
+	        {text:'Irlande', value:69},
+	        {text:'Islande', value:70},
+	        {text:'Israël', value:71},
+	        {text:'Italie', value:72},
+	        {text:'Jamaïque', value:73},
+	        {text:'Japon', value:74},
+	        {text:'Jordanie', value:75},
+	        {text:'Kazakhstan', value:76},
+	        {text:'Kenya', value:77},
+	        {text:'Koweït', value:78},
+	        {text:'Laos', value:79},
+	        {text:'Lettonie', value:80},
+	        {text:'Liban', value:81},
+	        {text:'Libéria', value:82},
+	        {text:'Libye', value:83},
+	        {text:'Lituanie', value:84},
+	        {text:'Luxembourg', value:85},
+	        {text:'Macédoine du Nord', value:86},
+	        {text:'Madagascar', value:87},
+	        {text:'Malaisie', value:88},
+	        {text:'Malawi', value:89},
+	        {text:'Mali', value:90},
+	        {text:'Malte', value:91},
+	        {text:'Maroc', value:92},
+	        {text:'Maurice', value:93},
+	        {text:'Mauritanie', value:94},
+	        {text:'Mexique', value:95},
+	        {text:'Moldavie', value:96},
+	        {text:'Monaco', value:97},
+	        {text:'Mongolie', value:98},
+	        {text:'Monténégro', value:99},
+	        {text:'Mozambique', value:100},
+	        {text:'Namibie', value:101},
+	        {text:'Népal', value:102},
+	        {text:'Nicaragua', value:103},
+	        {text:'Niger', value:104},
+	        {text:'Nigéria', value:105},
+	        {text:'Norvège', value:106},
+	        {text:'Nouvelle-Zélande', value:107},
+	        {text:'Oman', value:108},
+	        {text:'Ouganda', value:109},
+	        {text:'Pakistan', value:110},
+	        {text:'Palestine', value:111},
+	        {text:'Panama', value:112},
+	        {text:'Paraguay', value:113},
+	        {text:'Pays-Bas', value:114},
+	        {text:'Pérou', value:115},
+	        {text:'Philippines', value:116},
+	        {text:'Pologne', value:117},
+	        {text:'Portugal', value:118},
+	        {text:'Qatar', value:119},
+	        {text:'République Centrafricaine', value:120},
+	        {text:'République Démocratique du Congo', value:121},
+	        {text:'République Dominicaine', value:122},
+	        {text:'République Tchèque', value:123},
+	        {text:'Roumanie', value:124},
+	        {text:'Royaume-Uni', value:125},
+	        {text:'Russie', value:126},
+	        {text:'Rwanda', value:127},
+	        {text:'Sénégal', value:128},
+	        {text:'Serbie', value:129},
+	        {text:'Seychelles', value:130},
+	        {text:'Sierra Leone', value:131},
+	        {text:'Singapour', value:132},
+	        {text:'Slovaquie', value:133},
+	        {text:'Slovénie', value:134},
+	        {text:'Somalie', value:135},
+	        {text:'Soudan', value:136},
+	        {text:'Soudan du Sud', value:137},
+	        {text:'Sri Lanka', value:138},
+	        {text:'Suède', value:139},
+	        {text:'Suisse', value:140},
+	        {text:'Suriname', value:141},
+	        {text:'Syrie', value:142},
+	        {text:'Taïwan', value:143},
+	        {text:'Tanzanie', value:144},
+	        {text:'Tchad', value:145},
+	        {text:'Thaïlande', value:146},
+	        {text:'Togo', value:147},
+	        {text:'Trinité-et-Tobago', value:148},
+	        {text:'Tunisie', value:149},
+	        {text:'Turkménistan', value:150},
+	        {text:'Turquie', value:151},
+	        {text:'Ukraine', value:152},
+	        {text:'Uruguay', value:153},
+	        {text:'Venezuela', value:154},
+	        {text:'Viêt Nam', value:155},
+	        {text:'Yémen', value:156},
+	        {text:'Zambie', value:157},
+	        {text:'Zimbabwe', value:158},
+	        {text:'Autre', value:999}
+	    ]
+	})
 	
 	API.addQuestionsSet('6',{
 		inherit : 'basicDropdown',
 		name : 'annee_france_1',
-		stem : 'A quel âge vous êtes-vous installé(e) en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études. </i>',
+		stem : 'A quel âge vous êtes-vous installé(e) en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études. Si vous ne savez pas, indiquez "Ne sait pas". </i>',
 		answers : [
 			{text : '0', value:0},
 			{text : '1', value:1},
@@ -483,7 +649,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('13',{
 		inherit : 'basicSelect',
 		name : 'bac',
-		stem : 'Quel baccalauréat avez-vous passé ?',
+		stem : 'Quel baccalauréat (ou diplôme équivalent) avez-vous passé ?',
 		answers : [
 			{text : 'Général', value:1},
 			{text : 'Technologique', value:2},
@@ -494,7 +660,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('14', {
 		inherit : 'basicSelect', 
 		name : 'bac_fr',
-		stem : 'S\'agit-il d\'un baccalauréat d\'un établissement français (y compris à l\'étranger) ?',
+		stem : 'S\'agit-il d\'un baccalauréat (ou diplôme équivalent) d\'un établissement français (y compris à l\'étranger) ?',
 		answers :[
 			{text : 'Oui', value:1},
 			{text : 'Non', value:2}
@@ -618,13 +784,45 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('24',{
 		inherit : 'basicSelect', 
 		name : 'stereotypes', 
-		stem : 'Au-delà de votre expéricence personnelle, pensez-vous appartenir à un groupe envers lequel certains enseignants ont des stéréotypes ?',
+		stem : 'Au-delà de votre expéricence personnelle, pensez-vous appartenir à un groupe qui fait l\'objet de stéréotypes ou de préjugés négatifs de la part des enseignants en raison de l\'origine ?',
 		answers : [
 			{text : 'Oui', value:1}, 
 			{text : 'Non', value:2},
 			{text : 'Ne sait pas', value:8}
 			]
 	});
+
+	API.addQuestionsSet('24bis',{
+		inherit: 'basicGrid',
+		name: 'ambiance',
+		stem: 'Durant les deux semestres, étiez-vous satisfait(e) de l\'ambiance de travail dans votre groupe de TD ? <i>Si vous avez plusieurs groupes de TD, renseignez la réponse pour votre principale groupe de TD.</i>',
+		columns: [
+			{type:'text', textProperty: 'left', css: {width:'15%'}},
+			{stem: '1 - Pas du tout statisfait', css: {width: '10%'}},
+			{stem: '2', css: {width: '10%'}},
+			{stem: '3 - Moyennement satisfait', css: {width: '10%'}},
+			{stem: '4', css: {width: '10%'}},
+			{stem: '5 - Tout à fais satisfait', css: {width: '10%'}},
+			{type:'text', textProperty: 'right', css: {width:'15%'}}
+		],
+		rows: [
+			{stem: 'Semestre 1', name: 'ambiance_S1'},
+			{stem: 'Semestre 2', name: 'ambiance_S2'}
+		]
+	})
+
+	API.addQuestionsSet('24ter',{
+		inherit: 'basicSelect',
+		name: 'lien_classe',
+		stem: 'Durant les deux semestres, avez-vous noué des liens pour travailler avec d\'autres étudiants de votre groupe de TD ? <i>Si vous avez plusieurs groupes de TD, renseignez la réponse pour votre principale groupe de TD.</i>',
+		answers: [
+			{text: 'Aucun lien', value: 1},
+			{text: 'Un seul lien', value: 2},
+			{text: 'Quelques liens (deux ou trois)', value: 3},
+			{text: 'Plusieurs (quatre ou cinq)', value: 4},
+			{text: 'De nombreux liens (plus de cinq', value: 5}
+		]
+	})
 
 	//L1
 	
@@ -1726,42 +1924,50 @@ define(['questAPI'], function(Quest){
     //sequence
     
     API.addSequence([
-        {inherit: 'basicPage', progressBar: '1/13', decline: false, questions:[
+        {inherit: 'basicPage', progressBar: '1/11', decline: false, questions:[
             {inherit: '0', decline: false}]},
         
-        {inherit:'basicPage', progressBar: '2/13', decline: false, questions:{inherit:'1'}},
-		{inherit:'basicPage', progressBar: '3/13', questions:{inherit:'2'}},
-		{inherit:'basicPage', progressBar: '4/13',questions: [
+        {inherit:'basicPage', progressBar: '2/11', decline: false, questions:{inherit:'1'}},
+		{inherit:'basicPage', progressBar: '3/11', questions:{inherit:'2'}},
+		{inherit:'basicPage', progressBar: '4/11',questions: [
             {inherit:'3', helpText: false},
             {inherit:'3bis', helpText: false},
             {inherit:'3ter'}
         ]},
-		{inherit:'basicPage', progressBar: '5/13', questions:{inherit:'4'}},
-		{inherit:'basicPage', progressBar: '6/13', questions:{inherit:'5'}},
+		{inherit:'basicPage', progressBar: '5/11', questions:{inherit:'4'}},
+		{inherit:'basicPage', progressBar: '6/11', 
+			questions:[
+				{inherit:'5'},
+				{remix: true,
+					mixer : 'branch',
+					conditions : [
+						{compare: 2, to: 'current.questions.lieu_naissance.response'}
+					],
+					data: [
+						{inherit: '5bis'},
+						{inherit: '6'},
+						{remix: true,
+							mixer: 'branch',
+							conditions: [
+								{compare: 999, to: 'current.questions.annee_france_1.response'}
+							],
+							data: [
+								{inherit: '7'}
+							]
+						}
+					]
+				}
+			]
+		},
 
-		{mixer: 'branch',  //si question 5 = 1, alors question 8
-		conditions : [
-			{compare: 'current.questions.lieu_naissance.response', to: 2}
-		],
-		data: [
-			{inherit: 'basicPage', progressBar: '7/13', questions: {inherit: '6'},}
-		]},
-
-		{mixer: 'branch',
-			conditions: [
-				{compare: 'current.questions.annee_france_1.response', to: 999}
-			],
-			data: [
-				{inherit: 'basicPage', progressBar: '8/13', questions: {inherit: '7'}}
-		]},
 		 
 		
-		{inherit:'basicPage', progressBar: '9/13', questions:{inherit:'8'}}, //tt le monde se rejoint ici
+		{inherit:'basicPage', progressBar: '7/11', questions:{inherit:'8'}}, //tt le monde se rejoint ici
 		
-		{inherit:'basicPage', progressBar: '10/13', questions:{inherit:'9'}},
-		{inherit:'basicPage', progressBar: '11/13', questions:{inherit:'10'}},
-		{inherit:'basicPage', progressBar: '12/13', questions:{inherit:'11'}},
-		{inherit:'basicPage', progressBar: '13/13', questions:{inherit:'12'}},
+		{inherit:'basicPage', progressBar: '8/11', questions:{inherit:'9'}},
+		{inherit:'basicPage', progressBar: '9/11', questions:{inherit:'10'}},
+		{inherit:'basicPage', progressBar: '10/11', questions:{inherit:'11'}},
+		{inherit:'basicPage', progressBar: '11/11', questions:{inherit:'12'}},
 
 		//parcours scolaire 
 		
@@ -1812,19 +2018,29 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage', progressBar: '6/6', questions:{inherit:'19'}},
 		{inherit:'basicPage', questions: 
 			{type: 'info', stem: 'Nous allons maintenant vous poser des questions sur votre environnement d’étude actuellement à votre domicile.'}},
-		{inherit: 'basicPage',progressBar: '1/5', questions:{inherit:'20'}},
-		{inherit: 'basicPage', progressBar: '2/5', questions:{inherit:'21'}},
+		{inherit: 'basicPage',progressBar: '1/7', questions:{inherit:'20'}},
+		{inherit: 'basicPage', progressBar: '2/7', questions:{inherit:'21'}},
 		{mixer: 'branch',
 			conditions: [{compare: 'current.questions.licence.response', to:1}],
-			data: [{inherit: 'basicPage', progressBar: '3/5', questions:{inherit:'22'}}],
-			elseData: [{inherit: 'basicPage', progressBar: '4/5', questions:{inherit:'23'}}]
+			data: [{inherit: 'basicPage', progressBar: '3/7', questions:{inherit:'22'}}],
+			elseData: [{inherit: 'basicPage', progressBar: '4/7', questions:{inherit:'23'}}]
 		},
 
-	{inherit: 'basicPage', progressBar: '5/5', questions: {inherit: '24'}},
+	{inherit: 'basicPage', progressBar: '5/7', questions: {inherit: '24'}},
 
 	{inherit: 'basicPage', questions: 
 		{type: 'info',
-		stem: 'Nous allons maintenant vous poser des questions sur votre année à l\'université et sur chacun des enseignements que vous avez reçus en TD cette année.'
+		stem: 'Nous allons maintenant vous poser des questions sur votre année à l\'université. <br> Nous commençons par des questions générales sur vos groupes de TD.'
+		}
+	},
+
+	{inherit: 'basicPage', progressBar: '6/7', questions: {inherit: '24bis'}},
+	{inherit: 'basicPage', progressBar: '7/7', questions: {inherit: '24ter'}},
+
+
+	{inherit: 'basicPage', questions: 
+		{type: 'info',
+		stem: 'Nous allons maintenant vous poser des questions sur chacun des enseignements que vous avez reçus en TD cette année. <br> Nous commençons par des questions générales sur vos groupes de TD.'
 		}
 	},
 
