@@ -56,6 +56,13 @@ define(['managerAPI',
             //last:true, 
             header: 'Vous avez terminé le questionnaire !',
         }], 
+
+        consentement_fin: [{
+            name: 'consentement_fin',
+            type: 'quest', 
+            scriptUrl: 'consentement_fin.js',
+            title: 'Fin du questionnaire'
+        }],
         
        
 		
@@ -106,7 +113,7 @@ define(['managerAPI',
         {inherit: 'intro'},
         {inherit: 'questions'},
 		{inherit: 'uploading'},
-        {inherit: 'lastpage'},
+        {inherit: 'consentement_fin'},
         {inherit: 'redirect'}
     ]);
 

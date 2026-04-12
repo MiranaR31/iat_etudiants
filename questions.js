@@ -120,10 +120,21 @@ define(['questAPI'], function(Quest){
 
     API.addQuestionsSet('0',{
         inherit: 'basicText',
+		type: 'textNumber',
         name: 'id_etudiant',
         stem: 'Veuillez indiquer votre identifiant',
-    })
-
+		min: 10000,
+		max: 20000,
+		errorMsg : {
+            min: 'Veuillez indiquer un numéro valide.',
+            max: 'Veuillez indiquer un numéro valide.',
+            number: 'Veuillez indiquer un numéro valide.'
+        },
+        validator: {
+            min: 10000,
+            max: 20000
+		}
+	});
 
     API.addQuestionsSet('1',{
 		inherit : 'basicSelect',
@@ -359,7 +370,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('5bis',{
 		inherit: 'basicDropdown',
 	    name: 'pays_naissance',
-	    stem: 'Dans quel pays êtes-vous né ?',
+	    stem: 'Dans quel pays êtes-vous né(e) ?',
 	    answers: [
 	        {text:'Afghanistan', value:1},
 	        {text:'Afrique du Sud', value:2},
@@ -566,7 +577,7 @@ define(['questAPI'], function(Quest){
 	API.addQuestionsSet('7',{
 		inherit : 'basicSelect', 
 		name: 'annee_france_2',
-		stem : 'A quel âge vous êtes-vous installés en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
+		stem : 'A quel âge vous êtes-vous installé(e) en France ? <br><i> Il s\'agit de votre installation en France même si elle est temporaire pour vos études </i>',
 		answers : [
 			{text : 'Avant 5 ans', value:1},
 			{text : 'Entre 5 et 10 ans', value:2},
@@ -806,8 +817,8 @@ define(['questAPI'], function(Quest){
 			{type:'text', textProperty: 'right', css: {width:'15%'}}
 		],
 		rows: [
-			{stem: 'Semestre 1', name: 'ambiance_S1'},
-			{stem: 'Semestre 2', name: 'ambiance_S2'}
+			{text: 'Semestre 1', name: 'ambiance_S1'},
+			{text: 'Semestre 2', name: 'ambiance_S2'}
 		]
 	})
 
@@ -2018,15 +2029,15 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage', progressBar: '6/6', questions:{inherit:'19'}},
 		{inherit:'basicPage', questions: 
 			{type: 'info', stem: 'Nous allons maintenant vous poser des questions sur votre environnement d’étude actuellement à votre domicile.'}},
-		{inherit: 'basicPage',progressBar: '1/7', questions:{inherit:'20'}},
-		{inherit: 'basicPage', progressBar: '2/7', questions:{inherit:'21'}},
+		{inherit: 'basicPage',progressBar: '1/5', questions:{inherit:'20'}},
+		{inherit: 'basicPage', progressBar: '2/5', questions:{inherit:'21'}},
 		{mixer: 'branch',
 			conditions: [{compare: 'current.questions.licence.response', to:1}],
-			data: [{inherit: 'basicPage', progressBar: '3/7', questions:{inherit:'22'}}],
-			elseData: [{inherit: 'basicPage', progressBar: '4/7', questions:{inherit:'23'}}]
+			data: [{inherit: 'basicPage', progressBar: '3/5', questions:{inherit:'22'}}],
+			elseData: [{inherit: 'basicPage', progressBar: '4/5', questions:{inherit:'23'}}]
 		},
 
-	{inherit: 'basicPage', progressBar: '5/7', questions: {inherit: '24'}},
+	{inherit: 'basicPage', progressBar: '5/5', questions: {inherit: '24'}},
 
 	{inherit: 'basicPage', questions: 
 		{type: 'info',
@@ -2034,8 +2045,8 @@ define(['questAPI'], function(Quest){
 		}
 	},
 
-	{inherit: 'basicPage', progressBar: '6/7', questions: {inherit: '24bis'}},
-	{inherit: 'basicPage', progressBar: '7/7', questions: {inherit: '24ter'}},
+	{inherit: 'basicPage', progressBar: '1/2', questions: {inherit: '24bis'}},
+	{inherit: 'basicPage', progressBar: '1/2', questions: {inherit: '24ter'}},
 
 
 	{inherit: 'basicPage', questions: 
