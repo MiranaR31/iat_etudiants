@@ -124,7 +124,7 @@ define(['questAPI'], function(Quest){
         name: 'id_etudiant',
         stem: 'Veuillez indiquer votre identifiant',
 		min: 10000,
-		max: 20000,
+		max: 40000,
 		errorMsg : {
             min: 'Veuillez indiquer un numéro valide.',
             max: 'Veuillez indiquer un numéro valide.',
@@ -132,7 +132,7 @@ define(['questAPI'], function(Quest){
         },
         validator: {
             min: 10000,
-            max: 20000
+            max: 40000
 		}
 	});
 
